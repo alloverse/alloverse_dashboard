@@ -22,6 +22,8 @@ defmodule PlacesAlloverseCom.Application do
     Supervisor.start_link(children, opts)
   end
 
+  {Phoenix.PubSub, [name: PlacesAlloverseCom.PubSub, adapter: Phoenix.PubSub.PG2]}
+
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
