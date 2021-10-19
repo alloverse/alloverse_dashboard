@@ -2,15 +2,15 @@ body {
   margin: 0;
   height: 100vh;
   
-  //background: #c9eaef url("/images/places-bg@2x.jpg") no-repeat top;
-  background: #ffe259 url("/images/cloudy-sunset.png") no-repeat top; /* orange: #ffa751 */
+  
+  background: #8BA0D2 url("/images/bg_purple.png") no-repeat top;
 
   background-attachment: fixed;
   background-size: cover;
 
-  color: $av-color-teal;
-  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  color: $allo-color-text; 
+  font-family: $allo-font-default;
+  font-size: $allo-font-size-base;
 }
 
 .wrapper {
@@ -63,7 +63,9 @@ body {
   justify-content: space-between;
 
   .column {
-    width: 48%;
+    //width: 48%;
+
+    width: 100%;
 
     .room-list {
       display: flex;

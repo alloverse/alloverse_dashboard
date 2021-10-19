@@ -11,49 +11,54 @@
 
 
 <div class="content-wrapper">
-  <div class="column left">
 
-    <%# Only draw recommended places cards (and their header) if such a list exists %>
-    <%= if not Enum.empty?(@recommended_places) do %>
-      <div class="room-list recommended">
-        <div class="room-list__title">
-          Recommended
+
+  <%= if not Enum.empty?(@public_places) and not Enum.empty?(@recommended_places) do %>
+
+    <div class="column left">
+
+      <%# Only draw recommended places cards (and their header) if such a list exists %>
+      <%= if not Enum.empty?(@recommended_places) do %>
+        <div class="room-list recommended">
+          <div class="room-list__title">
+            Recommended
+          </div>
+
+          <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
+
+            <%= link to: "/place/#{recommended_place.id}", class: "card" do %>
+              <div class="title"><%= recommended_place.name %></div>
+              <div class="subtitle">Created <%= recommended_place.user.name %></div>
+            <% end %>
+
+          <% end )%>
+
         </div>
-
-        <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
-
-          <%= link to: "/place/#{recommended_place.id}", class: "card" do %>
-            <div class="title"><%= recommended_place.name %></div>
-            <div class="subtitle">Created <%= recommended_place.user.name %></div>
-          <% end %>
-
-        <% end )%>
-
-      </div>
-    <% end %>
+      <% end %>
 
 
-    <%# Only draw public places cards (and their header) if such a list exists %>
-    <%= if not Enum.empty?(@public_places) do %>
-      <div class="room-list public">
-        <div class="room-list__title">
-          Public
+      <%# Only draw public places cards (and their header) if such a list exists %>
+      <%= if not Enum.empty?(@public_places) do %>
+        <div class="room-list public">
+          <div class="room-list__title">
+            Public
+          </div>
+
+          <%= Enum.map(@public_places, fn(public_place) -> %>
+
+            <%= link to: "/place/#{public_place.id}", class: "card" do %>
+              <div class="title"><%= public_place.name%></div>
+              <div class="subtitle">Created by <%= public_place.user.name%></div>
+            <% end %>
+
+          <% end )%>
+
         </div>
+      <% end %>  
+    </div>
+  <% end %>
 
-        <%= Enum.map(@public_places, fn(public_place) -> %>
 
-          <%= link to: "/place/#{public_place.id}", class: "card" do %>
-            <div class="title"><%= public_place.name%></div>
-            <div class="subtitle">Created by <%= public_place.user.name%></div>
-          <% end %>
-
-        <% end )%>
-
-      </div>
-    <% end %>
-
-    
-  </div>
   <div class="column right">
     <div class="room-list myplaces">
 
