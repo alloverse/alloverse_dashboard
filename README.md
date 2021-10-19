@@ -26,6 +26,15 @@ And then
 
 ## Using local database on Mac
 
+You need to have a postgres server installed on your computer. If you have a Mac, you can:
+
+* brew install postgresql
+* brew services start postgresql
+* /usr/local/opt/postgres/bin/createuser -s postgres
+* ... and THEN do the ecto setup etc from above.
+
+If you're running from docker, you need to allow outside access:
+
 Replace listen with listen = "*" in this file
 
 `sudo pico /usr/local/var/postgres/postgresql.conf`
