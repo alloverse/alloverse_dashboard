@@ -41,13 +41,13 @@
 
   &__column-left {
     img {
-      border-radius: 0 $av-border-radius-quadruple $av-border-radius-quadruple 0;
+      border-radius: 0 $av-border-radius-double $av-border-radius-double 0;
     }
   }
 
   &__column-right {
     img {
-      border-radius: 0 $av-border-radius-quadruple $av-border-radius-quadruple 0;
+      border-radius: 0 $av-border-radius-double $av-border-radius-double 0;
     }
   }  
 }
@@ -78,7 +78,7 @@
   line-height: 22px;
   border-radius: 0;
   padding: $av-padding-triple;
-  background: $av-color-yellow-superlight;
+  background: $allo-color-lightblue;
 
   & > :last-child {
     margin-bottom: 0;

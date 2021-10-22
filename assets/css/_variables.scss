@@ -1,17 +1,21 @@
 
 
-/* Fonts */
-$allo-font-default: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* Typography */
+@font-face { font-family: Sen; src: url('/assets/fonts/Sen/Sen-Regular.ttf'); } 
+$allo-font-default: "Sen", "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$allo-font-size-base: 0.8rem;
+$allo-font-size-large: 1rem;
+$allo-font-size-small: 0.6rem;
 
-
-/* Font sizes */
-$allo-font-size-base: 2rem;
 
 
 /* Standard colors */
-
 $allo-color-text: #0C2B48;
+$allo-color-link: #0C2B48;
 $allo-color-primary: #0C2B48;
+$allo-color-light: #D4F2FC;
+
+$allo-color-lightblue: #BFDFF6;
 
 
 

@@ -58,8 +58,9 @@
         <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
         <% end %>
 
-        <%= render @view_module, @view_template, assigns %>
-    
+        <%# <%= render @view_module, @view_template, assigns %>
+         <%= @inner_content %>
+
       </div>
     </div>
     

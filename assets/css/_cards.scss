@@ -4,7 +4,7 @@
   box-shadow: $av-box-shadow-base;
   margin: 0 0 18px 0;
   transition: $av-standard-animation;
-  border-radius: $av-border-radius-quadruple;
+  border-radius: $av-border-radius-double;
   
   // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
   @at-root {
@@ -19,7 +19,7 @@
       &:hover {  
         //padding: 29px;
         //border-width: $card-highlight-border-width;
-        border-color: $av-color-teal;
+        border-color: $allo-color-light;
         text-decoration: none;
       }
     }
