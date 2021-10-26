@@ -71,7 +71,8 @@
     
     /* Links inside the dropdown */
     a {
-      color: $av-font-color;
+      color: $allo-color-text;
+      font-weight: normal;
       padding: 12px 24px;
       text-decoration: none;
       display: block;
@@ -89,7 +90,7 @@
 
       /* Change color of dropdown links on hover */
       &:hover {
-        background-color: $av-color-teal-superlight;
+        background-color: $allo-color-light;
       }
     }
   }

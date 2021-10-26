@@ -18,7 +18,7 @@ label {
   margin-top: 12px;
   margin-bottom: 4px;
   font-size: 0.8rem;
-  color: $allo-color-text;
+  color: $allo-color-gray;
 }
 
 input[type=text],input[type=password],textarea {
@@ -35,7 +35,12 @@ input[type=text],input[type=password],textarea {
 
   border-radius: $av-border-radius-half;
   margin: 0 -12px;
+  
+  color: $allo-color-text;
 
+  &:focus-visible {
+    border-color: $allo-color-text;
+  }
 
   &::placeholder {
     color: $av-color-teal-superlight;
@@ -65,8 +70,8 @@ textarea {
 
 button, .button {
   display: block;
-  background: $allo-color-primary;
-  color: #fff;
+  background: #E5CBFA;
+  color: $allo-color-text;
   text-transform: uppercase;
   font-size: $allo-font-size-base;
   font-weight: $av-font-weight-medium;
@@ -82,8 +87,9 @@ button, .button {
 
   &:hover {
     // border-radius: $av-border-radius-double;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     text-decoration: none;
+    background: #CFB0E9;
   }
 
   &.primary {
