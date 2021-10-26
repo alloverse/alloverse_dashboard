@@ -4,14 +4,21 @@ body {
 }
 
 
-h2 {
+h1 {
+  font-size: $av-font-size-huge;
+  font-weight: $av-font-weight-bold;
   margin: 0 0 $av-padding-base 0;
+}
+
+h2 {
   font-size: $av-font-size-large;
   font-weight: $av-font-weight-bold;
+  margin: 0 0 $av-padding-half 0;
+  color: $av-color-teal;
 }
 
 h3 {
-  font-size: $av-font-size-large;
+  font-size: $av-font-size-base;
   font-weight: $av-font-weight-normal;
   margin: 0 0 $av-padding-base 0;
 }

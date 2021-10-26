@@ -47,18 +47,21 @@ $av-border-radius-base: 12px;
 $av-border-radius-double: calc(2 * #{$av-border-radius-base});
 $av-border-radius-triple: calc(3 * #{$av-border-radius-base});
 $av-border-radius-quadruple: calc(4 * #{$av-border-radius-base});
+$av-border-radius-half: calc(#{$av-border-radius-base} / 2);
 
 
 $av-font-color: $av-color-teal;
 
 /* Font sizes */
-$av-font-size-base: 17px;
-$av-font-size-small: 14px;
-$av-font-size-large: 22px;
+$av-font-size-base: 1rem;
+$av-font-size-small: 0.8rem;
+$av-font-size-large: 1.2rem;
+$av-font-size-huge: 1.4rem;
 
 
 /* Font weights */
 $av-font-weight-normal: 400;
+$av-font-weight-medium: 500;
 $av-font-weight-bold: 600;
 
 

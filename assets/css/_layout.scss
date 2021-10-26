@@ -25,13 +25,13 @@
     .column-content {
       padding: $av-padding-quadruple;
 
-      .column-content__header {
-        margin: 0 0 $av-padding-half 0 ;
-      }
+      // .column-content__header {
+      //   margin: 0 0 $av-padding-half 0 ;
+      // }
 
-      .column-content__subheader {
-        margin: 0 0 $av-padding-half 0 ;
-      }
+      // .column-content__subheader {
+      //   margin: 0 0 $av-padding-half 0 ;
+      // }
 
       .column-content__paragraph {
         margin: $av-padding-double 0;
@@ -74,7 +74,7 @@
 .card.message-box {
   margin-bottom: 64px;
   color: $allo-color-text;
-  font-size: 16px;
+  font-size: $av-font-size-base;
   line-height: 22px;
   border-radius: 0;
   padding: $av-padding-triple;

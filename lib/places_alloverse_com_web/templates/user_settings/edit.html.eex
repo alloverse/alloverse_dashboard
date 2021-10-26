@@ -3,8 +3,8 @@
       
     <div class="card-column-container__column-left">
       <div class="column-content">
-        <h2 class="column-content__header">Settings</h2>
-        <h3>Change e-mail</h3>
+        <h1 class="column-content__header">Settings</h1>
+        <h2>Change e-mail</h2>
 
         <%= form_for @email_changeset, Routes.user_settings_path(@conn, :update_email), fn f -> %>
           <%= if @email_changeset.action do %>
@@ -26,7 +26,10 @@
           </div>
         <% end %>
 
-        <h3>Change password</h3>
+        <br />
+        <br />
+
+        <h2>Change password</h2>
 
         <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update_password), fn f -> %>
           <%= if @password_changeset.action do %>

@@ -7,19 +7,21 @@
     </div>
   <% end %>
   
+  <%= label f, :name, "Place name" %>
   <%= text_input f, :name, placeholder: "Place name here" %>
   <%= error_tag f, :name %>
+
   <h4>unique_id.places.alloverse.com</h4>
 
+  <%= label f, :description, "Place description" %>
   <%= textarea f, :description, placeholder: "Short description of the place here" %>
   <%= error_tag f, :description %>
 
-  <%= checkbox f, :public %>
-  <label>Make this place public</label>
+  
+  <%#= checkbox f, :public %>
+  <%#= label f, :public, "Make this place public" %>
 
   <div class="button-container-vertical">
-    <div class="button large">
-      <%= submit "Save" %>
-    </div>
+    <%= submit "Save" %>
   </div>
 <% end %>

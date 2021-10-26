@@ -13,6 +13,14 @@
 }
 
 
+label {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: $allo-color-text;
+}
+
 input[type=text],input[type=password],textarea {
   box-sizing: border-box;
 
@@ -24,6 +32,10 @@ input[type=text],input[type=password],textarea {
   
   font-size: $av-font-size-base;
   padding: $av-padding-base;
+
+  border-radius: $av-border-radius-half;
+  margin: 0 -12px;
+
 
   &::placeholder {
     color: $av-color-teal-superlight;
@@ -48,5 +60,45 @@ textarea {
   &.error {
     color: $av-color-error;
     border-color: $av-color-error;
+  }
+}
+
+button, .button {
+  display: block;
+  background: $allo-color-primary;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: $allo-font-size-base;
+  font-weight: $av-font-weight-medium;
+  text-align: center;
+  border-radius: $av-border-radius-half;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: 0;
+
+  transition: $av-standard-animation;
+
+  position: relative;
+
+  &:hover {
+    // border-radius: $av-border-radius-double;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-decoration: none;
+  }
+
+  &.primary {
+    background: #D4F2FC;
+    color: #0C2B48;
+    &:hover {
+      background: #BFDFF6;
+    }
+  }
+
+  &.large {
+    font-size: $allo-font-size-large;
+  }
+
+  &.full-width {
+    width: 100%;
   }
 }

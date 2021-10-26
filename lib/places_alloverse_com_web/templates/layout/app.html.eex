@@ -21,7 +21,7 @@
         <div class="header">
 
           <%= link to: "/", class: "header__title" do %>
-            <img class="header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-logo.png") %>" />
+            <img class="header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-dashboard-logo-48.png") %>" />
             <span>
               Alloverse <strong>Places</strong>    
             </span>
@@ -31,10 +31,10 @@
           
           <%= if @current_user do %>
           <div class="dropdown-container">
-            <a class="button image">
+            <div class="button">
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg") " /> %>
               <%= @current_user.name %>
-            </a>
+            </div>
             <div class="dropdown-content">
               <%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %>
 
