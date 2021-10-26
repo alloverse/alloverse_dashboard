@@ -11,14 +11,12 @@
     a#{&} {
       border-radius: $av-border-radius-base;
       cursor: pointer;
-      border-width: 3px;
+      border-width: $card-highlight-border-width;
       border-style: solid;
       padding: 29px;
       border-color: #fff;
 
       &:hover {  
-        //padding: 29px;
-        //border-width: $card-highlight-border-width;
         border-color: $allo-color-light;
         text-decoration: none;
       }

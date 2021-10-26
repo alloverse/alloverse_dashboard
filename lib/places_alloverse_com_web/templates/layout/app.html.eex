@@ -37,10 +37,10 @@
             </a>
             <div class="dropdown-content">
               <%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %>
+
+
               <%= form_for @conn, Routes.session_path(@conn, :delete), [method: :delete, as: :user], fn _ -> %>
-                <%# <div class="button"> %>
-                  <%= submit "Log Out", [class: "button"] %>
-                <%# </div> %>
+                <%= submit "Log Out", [class: "link"] %>
               <% end %>
             </div>
           </div>
