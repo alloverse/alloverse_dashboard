@@ -15,8 +15,8 @@ config :places_alloverse_com, PlacesAlloverseComWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "0I7OIsK/bUWKn1q9Qj54cYjHnWPhsU/c2S/g9eWSMqLvRYsWTIX9u9Wkf5ZsyH3W",
   render_errors: [view: PlacesAlloverseComWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: PlacesAlloverseCom.PubSub, adapter: Phoenix.PubSub.PG2]
-  # pubsub_server: PlacesAlloverseCom.PubSub
+  # pubsub: [name: PlacesAlloverseCom.PubSub, adapter: Phoenix.PubSub.PG2] TODO Figure otu how to define the PubSub adapter
+  pubsub_server: PlacesAlloverseCom.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

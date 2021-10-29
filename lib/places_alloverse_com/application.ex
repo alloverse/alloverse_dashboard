@@ -8,6 +8,10 @@ defmodule PlacesAlloverseCom.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      # Start the PubSub system
+      # {Phoenix.PubSub, [name: PlacesAlloverseCom.PubSub, adapter: Phoenix.PubSub.PG2]}
+      {Phoenix.PubSub, name: PlacesAlloverseCom.PubSub},
+
       # Start the Ecto repository
       PlacesAlloverseCom.Repo,
       # Start the endpoint when the application starts
@@ -22,7 +26,7 @@ defmodule PlacesAlloverseCom.Application do
     Supervisor.start_link(children, opts)
   end
 
-  # {Phoenix.PubSub, [name: PlacesAlloverseCom.PubSub, adapter: Phoenix.PubSub.PG2]}
+
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
