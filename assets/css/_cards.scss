@@ -4,22 +4,20 @@
   box-shadow: $av-box-shadow-base;
   margin: 0 0 18px 0;
   transition: $av-standard-animation;
-  border-radius: $av-border-radius-quadruple;
+  border-radius: $av-border-radius-double;
   
   // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
   @at-root {
     a#{&} {
       border-radius: $av-border-radius-base;
       cursor: pointer;
-      border-width: 3px;
+      border-width: $card-highlight-border-width;
       border-style: solid;
       padding: 29px;
       border-color: #fff;
 
       &:hover {  
-        //padding: 29px;
-        //border-width: $card-highlight-border-width;
-        border-color: $av-color-teal;
+        border-color: $allo-color-light;
         text-decoration: none;
       }
     }
@@ -38,12 +36,12 @@
   }
 
   &.create-place {
-    background: $av-color-teal-light;
+    background: #D4F2FC;
     border-color: $av-color-teal-dark;
 
     .title,
     .subtitle {
-      color: #fff;
+      // color: #fff;
     }
   }
 

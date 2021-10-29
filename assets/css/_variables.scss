@@ -1,17 +1,23 @@
 
 
-/* Fonts */
-$allo-font-default: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* Typography */
+@font-face { font-family: Sen; src: url('/assets/fonts/Sen/Sen-Regular.ttf'); } 
+$allo-font-default: "Sen", "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$allo-font-size-base: 0.8rem;
+$allo-font-size-large: 1rem;
+$allo-font-size-small: 0.6rem;
 
-
-/* Font sizes */
-$allo-font-size-base: 2rem;
 
 
 /* Standard colors */
-
 $allo-color-text: #0C2B48;
+$allo-color-link: #0C2B48;
 $allo-color-primary: #0C2B48;
+$allo-color-light: #D4F2FC;
+$allo-color-gray: #85919B;
+
+$allo-color-grayblue: #6E8FAE;
+$allo-color-lightblue: #BFDFF6;
 
 
 
@@ -43,18 +49,21 @@ $av-border-radius-base: 12px;
 $av-border-radius-double: calc(2 * #{$av-border-radius-base});
 $av-border-radius-triple: calc(3 * #{$av-border-radius-base});
 $av-border-radius-quadruple: calc(4 * #{$av-border-radius-base});
+$av-border-radius-half: calc(#{$av-border-radius-base} / 2);
 
 
 $av-font-color: $av-color-teal;
 
 /* Font sizes */
-$av-font-size-base: 17px;
-$av-font-size-small: 14px;
-$av-font-size-large: 22px;
+$av-font-size-base: 1rem;
+$av-font-size-small: 0.8rem;
+$av-font-size-large: 1.2rem;
+$av-font-size-huge: 1.6rem;
 
 
 /* Font weights */
 $av-font-weight-normal: 400;
+$av-font-weight-medium: 500;
 $av-font-weight-bold: 600;
 
 

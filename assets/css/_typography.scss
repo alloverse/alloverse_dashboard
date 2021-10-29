@@ -1,11 +1,24 @@
-h2 {
-  margin: 0 0 $av-padding-base 0;
-  font-size: $av-font-size-large;
+
+body {
+  font-family: $allo-font-default;
+}
+
+
+h1 {
+  font-size: $av-font-size-huge;
   font-weight: $av-font-weight-bold;
+  margin: 0 0 $av-padding-base 0;
+}
+
+h2 {
+  font-size: $av-font-size-large;
+  font-weight: $av-font-weight-medium;
+  margin: 0 0 $av-padding-half 0;
+  color: $allo-color-grayblue;
 }
 
 h3 {
-  font-size: $av-font-size-large;
+  font-size: $av-font-size-base;
   font-weight: $av-font-weight-normal;
   margin: 0 0 $av-padding-base 0;
 }
@@ -25,7 +38,7 @@ p {
 a {
   font-weight: $av-font-weight-bold;
   text-decoration: none;
-  color: $av-color-teal;
+  color: $allo-color-link;
 
   &:hover {
     text-decoration: underline;

@@ -1,6 +1,6 @@
   <%= if @current_user do %>
   <div class="card message-box">
-    <h3>Welcome to Alloverse Places!</h3>
+    <h1>Welcome to Alloverse Places!</h1>
     <p>
       Here, you’ll find places hosted by Alloverse’s own servers. If
       you’re tech savvy, you can also create and host your own server by
@@ -71,7 +71,7 @@
 
       <%= Enum.map(@my_places, fn(place) -> %>
       
-        <%= link to: "/place/#{place.id}", class: "card", style: "border-color: #33C842" do %>
+        <%= link to: "/place/#{place.id}", class: "card" do %>
           <div class="title"><%= place.name %></div>
           <div class="subtitle"><%= place.user.name %> &middot; April 18th 2020</div>
         <% end %>
