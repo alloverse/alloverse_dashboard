@@ -72,7 +72,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
 
     place = Places.get_place!(id)
 
-    if Enum.member?(my_place_ids, id) do
+    if Enum.member?(my_place_ids, String.to_integer(id)) do
       {:ok, _place} = Places.delete_place(place)
 
       conn
@@ -95,7 +95,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
     my_place_ids = Enum.map(my_places, fn my_place -> my_place.id end)
     place = Places.get_place!(id)
 
-    if Enum.member?(my_place_ids, id) do
+    if Enum.member?(my_place_ids, String.to_integer(id)) do
       case Places.update_place(place, place_params) do
         {:ok, place} ->
           conn
