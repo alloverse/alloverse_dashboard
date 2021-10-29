@@ -78,30 +78,35 @@
   line-height: 22px;
   border-radius: 0;
   padding: $av-padding-triple;
-  background: $allo-color-lightblue;
+  background: $allo-color-info-75;
 
   & > :last-child {
     margin-bottom: 0;
   }
-}
-
-
-
-.message-panel {
-  position: sticky;
-  box-sizing: border-box;
-  top: 0;
-  width: 100vw;
-  color: $av-color-message-bg;
-  padding: 36px 36px 24px 36px;
-  z-index: 1; //current highest
-
-  &.warning {
-    background: $av-color-warning;
-  }
 
   &.error {
-    background: $av-color-error;
-    color: #fff;
+    background: $allo-color-error;
+    color: $allo-color-light;
   }
 }
+
+
+
+// .message-panel {
+//   position: sticky;
+//   box-sizing: border-box;
+//   top: 0;
+//   width: 100vw;
+//   color: $av-color-message-bg;
+//   padding: 36px 36px 24px 36px;
+//   z-index: 1; //current highest
+
+//   &.warning {
+//     background: $av-color-warning;
+//   }
+
+//   &.error {
+//     background: $av-color-error;
+//     color: #fff;
+//   }
+// }

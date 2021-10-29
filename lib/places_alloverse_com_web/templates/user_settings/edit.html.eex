@@ -8,6 +8,7 @@
 
         <%= form_for @email_changeset, Routes.user_settings_path(@conn, :update_email), fn f -> %>
           <%= if @email_changeset.action do %>
+            <%#= TODO: STYLE THESE ERROR MESSAGES %>
             <div class="alert alert-danger">
               <p>Oops, something went wrong! Please check the errors below.</p>
             </div>
@@ -33,6 +34,7 @@
 
         <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update_password), fn f -> %>
           <%= if @password_changeset.action do %>
+            <%#= TODO: STYLE THESE ERROR MESSAGES %>
             <div class="alert alert-danger">
               <p>Oops, something went wrong! Please check the errors below.</p>
             </div>

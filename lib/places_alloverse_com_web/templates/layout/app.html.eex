@@ -18,20 +18,20 @@
 
     <div class="wrapper">
       <div class="main-container">
-        <div class="header">
+        <div class="page-header">
 
-          <%= link to: "/", class: "header__title" do %>
-            <img class="header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-dashboard-logo-48.png") %>" />
+          <%= link to: "/", class: "page-header__title" do %>
+            <img class="page-header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-dashboard-logo-48.png") %>" />
             <span>
               Alloverse <strong>Places</strong>    
             </span>
           <% end %>
 
-          <div class="header__buttons">
+          <div class="page-header__buttons">
           
           <%= if @current_user do %>
           <div class="dropdown-container">
-            <div class="button">
+            <div class="button header">
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg") " /> %>
               <%= @current_user.name %>
             </div>
@@ -47,8 +47,8 @@
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg")" /> %>
                 
             <% else %>
-              <%= link("Create Account", to: "/user/new", class: "button")%>
-              <%= link("Log In", to: "/sessions/new", class: "button")%>
+              <%= link("Create Account", to: "/user/new", class: "button header")%>
+              <%= link("Log In", to: "/sessions/new", class: "button header")%>
             <% end %>
           </div>
         </div>

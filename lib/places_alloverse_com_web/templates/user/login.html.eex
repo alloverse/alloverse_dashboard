@@ -13,7 +13,7 @@
           <%# <input  class="error" type="text" placeholder="error demo input" /> %>
           <%# <div class="input-message error">This is a sample input error message</div> %>
 
-          <div class="button">Log In</div>
+          <div class="button neutral">Log In</div>
 
           <div><%= link("Forgot your password?", to: "/forgot-password") %></div>
         </div>

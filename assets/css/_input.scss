@@ -18,32 +18,35 @@ label {
   margin-top: 12px;
   margin-bottom: 4px;
   font-size: 0.8rem;
-  color: $allo-color-gray;
+  color: $allo-color-dark;
 }
 
 input[type=text],input[type=password],textarea {
   box-sizing: border-box;
-
   width: 100%;
   max-width: 100%;
-
-  border: 1px solid $av-color-teal-superlight;
-  background: $av-color-input-background;
-  
-  font-size: $av-font-size-base;
   padding: $av-padding-base;
-
-  border-radius: $av-border-radius-half;
   margin: 0 -12px;
-  
+  border-radius: $av-border-radius-half;
   color: $allo-color-text;
+  font-size: $av-font-size-base;
+
+  border: 1px solid $allo-color-input-border;
+  background: $allo-color-input-bg;
+
+  &:hover {
+    border-color: $allo-color-text;
+    background: $allo-color-input-bg-hover;
+  }
 
   &:focus-visible {
+    outline: 0;
     border-color: $allo-color-text;
+    background: $allo-color-input-bg-focus;
   }
 
   &::placeholder {
-    color: $av-color-teal-superlight;
+    color: $allo-color-primary-alt;
   }
 
   &.error {
@@ -70,33 +73,62 @@ textarea {
 
 button, .button {
   display: block;
-  background: #E5CBFA;
-  color: $allo-color-text;
+  color: $allo-color-dark;
   text-transform: uppercase;
   font-size: $allo-font-size-base;
-  font-weight: $av-font-weight-medium;
+  font-weight: $av-font-weight-bold;
   text-align: center;
-  border-radius: $av-border-radius-half;
+  border-radius: $av-border-radius-double;
   cursor: pointer;
   padding: 12px 24px;
   border: 0;
+  outline: 0;
 
   transition: $av-standard-animation;
 
   position: relative;
 
-  &:hover {
-    // border-radius: $av-border-radius-double;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    text-decoration: none;
-    background: #CFB0E9;
+
+  &.neutral {
+    background: $allo-color-neutral-95;
+    color: $allo-color-dark;
+
+    &:hover {
+      //box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      text-decoration: none;
+      background: $allo-color-light-alt-95;
+      border-color: $allo-color-dark;
+      outline: 1px solid $allo-color-dark;
+
+    }
+  
+    &:active {
+  
+    }
   }
+  
 
   &.primary {
-    background: #D4F2FC;
-    color: #0C2B48;
+    background: $allo-color-primary-90;
+    color: $allo-color-dark;
     &:hover {
-      background: #BFDFF6;
+      background: $allo-color-primary-alt;
+      outline: 1px solid $allo-color-dark;
+    }
+    &:active {
+      
+    }
+  }
+
+  &.header {
+    background: $allo-color-dark;
+    color: $allo-color-light;
+    &:hover {
+      background: $allo-color-light-30;
+      color: $allo-color-dark;
+    }
+    &:active {
+
     }
   }
 

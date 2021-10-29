@@ -10,7 +10,7 @@
           <%= text_input f, :email, placeholder: "Email", required: true %>
           
           
-          <%= submit "Send instructions to reset password", [class: "button full-width"] %>
+          <%= submit "Send instructions to reset password", [class: "button neutral full-width"] %>
           
         <% end %>
 

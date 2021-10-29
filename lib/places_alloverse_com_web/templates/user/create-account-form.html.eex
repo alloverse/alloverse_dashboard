@@ -1,6 +1,8 @@
 
 <%= form_for @changeset, @action, [class: "form-container"], fn f -> %>
   <%= if @changeset.action do %>
+
+    <%#= TODO: STYLE THESE ERROR MESSAGES %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>

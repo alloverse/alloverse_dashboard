@@ -1,61 +1,58 @@
 .card {
   display: block;
-  background: #fff;
+  //background: #fff;
+  background: rgba(229, 203, 250, 0.6);
+
   box-shadow: $av-box-shadow-base;
   margin: 0 0 18px 0;
   transition: $av-standard-animation;
   border-radius: $av-border-radius-double;
   
-  // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
-  @at-root {
-    a#{&} {
-      border-radius: $av-border-radius-base;
-      cursor: pointer;
-      border-width: $card-highlight-border-width;
-      border-style: solid;
-      padding: 29px;
-      border-color: #fff;
-
-      &:hover {  
-        border-color: $allo-color-light;
-        text-decoration: none;
-      }
-    }
-  }
-
   .title {
     font-size: 26px;
     font-weight: $av-font-weight-bold;
   }
 
   .subtitle {
-    font-weight: $av-font-weight-normal;
+    font-weight: $av-font-weight-bold;
     font-size: $av-font-size-small;
     line-height: 20px;
-    color: #85a9af;
   }
 
-  &.create-place {
-    background: #D4F2FC;
-    border-color: $av-color-teal-dark;
+  // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
+  @at-root {
+    a#{&} {
+      border-radius: $av-border-radius-base;
+      cursor: pointer;
+      padding: 29px;
 
-    .title,
-    .subtitle {
-      // color: #fff;
+      &:hover {  
+        text-decoration: none;
+      }
     }
   }
 
-  &.create-account {
-    background: $av-color-orange;
-    border-color: $av-color-orange;
+  &.neutral {
+    background: $allo-color-neutral-85;
 
-    &:hover {
-      border-color: $av-color-orange-dark;
+    .title {
+      color: $allo-color-white;
     }
-
-    .title,
+  
     .subtitle {
-      color: #fff;
+      color: $allo-color-white;
+    }
+  }
+
+  &.primary {
+    background: $allo-color-primary-90;
+
+    .title {
+      color: $allo-color-dark;
+    }
+  
+    .subtitle {
+      color: $allo-color-gray;
     }
   }
 }

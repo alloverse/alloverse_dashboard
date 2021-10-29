@@ -26,7 +26,7 @@
 
           <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
 
-            <%= link to: "/place/#{recommended_place.id}", class: "card" do %>
+            <%= link to: "/place/#{recommended_place.id}", class: "card neutral" do %>
               <div class="title"><%= recommended_place.name %></div>
               <div class="subtitle">Created <%= recommended_place.user.name %></div>
             <% end %>
@@ -71,13 +71,13 @@
 
       <%= Enum.map(@my_places, fn(place) -> %>
       
-        <%= link to: "/place/#{place.id}", class: "card" do %>
+        <%= link to: "/place/#{place.id}", class: "card neutral" do %>
           <div class="title"><%= place.name %></div>
           <div class="subtitle"><%= place.user.name %> &middot; April 18th 2020</div>
         <% end %>
       <% end )%>
 
-        <%= link to: "/place/new", class: "card create-place" do %>
+        <%= link to: "/place/new", class: "card primary" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Have it your way</div>
         <% end %>
