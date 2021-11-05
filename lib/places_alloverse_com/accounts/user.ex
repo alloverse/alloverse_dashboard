@@ -9,6 +9,7 @@ defmodule PlacesAlloverseCom.Accounts.User do
     field :username, :string
     has_one :credential, Credential
     has_many :places, Place
+    field :admin, :boolean, default: false
 
     timestamps()
   end
