@@ -18,8 +18,8 @@
   <%= error_tag f, :description %>
 
   
-  <%#= checkbox f, :public %>
-  <%#= label f, :public, "Make this place public" %>
+  <%= checkbox f, :public %>
+  <%= label f, :public, "Make this place public" %>
 
   <div class="button-container-vertical">
     <%= submit "Save", [class: "button primary"] %>

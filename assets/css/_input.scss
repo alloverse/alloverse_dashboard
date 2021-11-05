@@ -61,14 +61,14 @@ textarea {
 
 .inline-form-validation-message {
   font-size: $av-font-size-small;
-  border-left-width: 3px;
-  border-left-style: solid;
-  padding-left: 12px;
+  color: $av-color-error;
+  border-color: $av-color-error;
+  margin-top: 3px;
   
-  &.error {
-    color: $av-color-error;
-    border-color: $av-color-error;
-  }
+  // &.error {
+  //   color: $av-color-error;
+  //   border-color: $av-color-error;
+  // }
 }
 
 .forgot-password-container {

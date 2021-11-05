@@ -6,8 +6,8 @@
 .card-column-container {
   display: flex;
   flex-direction: row;
-  column-gap: $av-padding-base;
-  -webkit-column-gap: $av-padding-base;
+  // column-gap: $av-padding-base;
+  // -webkit-column-gap: $av-padding-base;
 
   &__column-left, &__column-right {
     flex: 1 0 50%;

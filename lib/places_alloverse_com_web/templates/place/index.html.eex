@@ -13,7 +13,7 @@
 <div class="content-wrapper">
 
 
-  <%= if not Enum.empty?(@public_places) and not Enum.empty?(@recommended_places) do %>
+  <%= if not Enum.empty?(@public_places) or not Enum.empty?(@recommended_places) do %>
 
     <div class="column left">
 
@@ -46,7 +46,7 @@
 
           <%= Enum.map(@public_places, fn(public_place) -> %>
 
-            <%= link to: "/place/#{public_place.id}", class: "card" do %>
+            <%= link to: "/place/#{public_place.id}", class: "card neutral" do %>
               <div class="title"><%= public_place.name%></div>
               <div class="subtitle">Created by <%= public_place.user.name%></div>
             <% end %>
@@ -76,7 +76,7 @@
 
         <%= link to: "/place/new", class: "card primary" do %>
           <div class="title">Create new Place</div>
-          <div class="subtitle">Have it your way</div>
+          <div class="subtitle">Coming soon!</div>
         <% end %>
 
       <% else %>
