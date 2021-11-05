@@ -3,6 +3,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
 
   alias PlacesAlloverseCom.Places
   alias PlacesAlloverseCom.Places.Place
+  alias PlacesAlloverseCom.Accounts
 
 
   def index(conn, _params) do
@@ -16,7 +17,13 @@ defmodule PlacesAlloverseComWeb.PlaceController do
       {:ok, current_user} -> Places.list_my_places(current_user)
     end
 
-    render(conn, "index.html", recommended_places: recommended_places, public_places: public_places, my_places: my_places)
+    admin_user = case Map.fetch(conn.assigns, :current_user) do
+      {:ok, nil} -> []
+      {:ok, current_user} -> current_user.admin
+
+    end
+
+    render(conn, "index.html", recommended_places: recommended_places, public_places: public_places, my_places: my_places, admin_user: admin_user)
   end
 
   def show(conn, %{"id" => id}) do

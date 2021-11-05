@@ -54,20 +54,20 @@
           <% end )%>
 
         </div>
-      <% end %>  
+      <% end %>
     </div>
   <% end %>
 
   <div class="column right">
     <div class="room-list myplaces">
 
-     <%= if @current_user do %>
+     <%= if @current_user && @admin_user do %>
       <div class="room-list__title">
         My Places
       </div>
 
       <%= Enum.map(@my_places, fn(place) -> %>
-      
+
         <%= link to: "/place/#{place.id}", class: "card neutral" do %>
           <div class="title"><%= place.name %></div>
           <div class="subtitle"><%= place.user.name %> &middot; <%= place.inserted_at %></div>
@@ -76,21 +76,31 @@
 
         <%= link to: "/place/new", class: "card primary" do %>
           <div class="title">Create new Place</div>
+          <div class="subtitle">Create your own place!</div>
+        <% end %>
+      <% end %>
+
+    </div>
+
+    <%= if @current_user && !@admin_user do %>
+      <div class="room-list__title">
+          Private
+      </div>
+        <%= link to: "/", class: "card primary" do %>
+          <div class="title">Create new Place</div>
           <div class="subtitle">Coming soon!</div>
         <% end %>
+    <% end %>
 
-      <% else %>
-
-        <div class="room-list__title">
+    <%= if !@current_user do %>
+      <div class="room-list__title">
           Private
-        </div>
+      </div>
 
         <%= link to: "/user/new", class: "card create-account" do %>
           <div class="title">Create an account</div>
-          <div class="subtitle">Start making your own place</div>
+          <div class="subtitle">Soon you can make your own place</div>
         <% end %>
-      <% end %>
-  
-    </div>
+    <% end %>
   </div>
 </div>
