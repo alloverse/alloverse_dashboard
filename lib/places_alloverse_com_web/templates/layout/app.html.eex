@@ -9,13 +9,6 @@
   </head>
   <body>
 
-  <%# TODO: Display this error message panel if something goes wrong %>
-  <%# <div class="message-panel error">
-    <h3>Something went wrong</h3>
-    <p>Sike! It's just a test error message!</p>
-  </div> %>
-
-
     <div class="wrapper">
       <div class="main-container">
         <div class="page-header">
@@ -38,7 +31,6 @@
             <div class="dropdown-content">
               <%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %>
 
-
               <%= form_for @conn, Routes.session_path(@conn, :delete), [method: :delete, as: :user], fn _ -> %>
                 <%= submit "Log Out", [class: "link"] %>
               <% end %>
@@ -53,9 +45,12 @@
           </div>
         </div>
 
-        <%= if get_flash(@conn, :info) || get_flash(@conn, :error) do %>
-        <div class="message-card info" role="alert"><%= get_flash(@conn, :info) %></div>
-        <div class="message-card error" role="alert"><%= get_flash(@conn, :error) %></div>
+        <%= if get_flash(@conn, :info) do %>
+          <div class="message-card info" role="info"><%= get_flash(@conn, :info) %></div>
+        <% end %>
+
+        <%= if get_flash(@conn, :error) do %>
+          <div class="message-card error" role="alert"><%= get_flash(@conn, :error) %></div>
         <% end %>
 
         <%# <%= render @view_module, @view_template, assigns %>

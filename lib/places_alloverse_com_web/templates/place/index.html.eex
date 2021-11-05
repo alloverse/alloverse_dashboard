@@ -58,11 +58,8 @@
     </div>
   <% end %>
 
-
   <div class="column right">
     <div class="room-list myplaces">
-
-      
 
      <%= if @current_user do %>
       <div class="room-list__title">
@@ -73,7 +70,7 @@
       
         <%= link to: "/place/#{place.id}", class: "card neutral" do %>
           <div class="title"><%= place.name %></div>
-          <div class="subtitle"><%= place.user.name %> &middot; April 18th 2020</div>
+          <div class="subtitle"><%= place.user.name %> &middot; <%= place.inserted_at %></div>
         <% end %>
       <% end )%>
 

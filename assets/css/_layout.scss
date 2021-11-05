@@ -82,11 +82,11 @@
   background: $allo-color-info-75;
   color: $allo-color-text;
   
-  margin-bottom: 64px;
+  margin-bottom: 12px;
   font-size: $av-font-size-base;
   line-height: 22px;
   border-radius: 0;
-  padding: $av-padding-triple;
+  padding: $av-padding-double $av-padding-triple;
 
   & > :last-child {
     margin-bottom: 0;

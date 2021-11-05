@@ -1,32 +1,34 @@
 
 <%= form_for @changeset, @action, [class: "form-container"], fn f -> %>
   <%= if @changeset.action do %>
-
-    <%#= TODO: STYLE THESE ERROR MESSAGES %>
     <div class="message-card error">
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
 
-  <%= text_input f, :name, placeholder: "What is your name?" %>
+  <%= label f, :name, "What's your name?" %>
+  <%= text_input f, :name, placeholder: "" %>
   <%= error_tag f, :name %>
 
-  <%= text_input f, :username, placeholder: "Chose a username" %>
+  <%= label f, :username, "Choose a username" %>
+  <%= text_input f, :username, placeholder: "" %>
   <%= error_tag f, :username %>
 
   
     <%= inputs_for f, :credential, fn cf -> %>
-      <%= text_input cf, :email, placeholder: "Email" %>
+      <%= label f, :email, "What's your email?" %>
+      <%= text_input cf, :email, placeholder: "email@example.com" %>
       <%= error_tag cf, :email %>
     <% end %>
 
      <%= inputs_for f, :credential, fn cf -> %>
-      <%= password_input cf, :password, placeholder: "Password" %>
+      <%= label f, :email, "Choose a password" %>
+      <%= password_input cf, :password, placeholder: "" %>
       <%= error_tag cf, :password %>
     <% end %>
 
     <div class="button-container-vertical">
-      <%= submit "Save", [class: "button full-width"] %>
+      <%= submit "Create Account", [class: "button full-width primary"] %>
     </div>    
 
 <% end %>

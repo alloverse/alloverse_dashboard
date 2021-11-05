@@ -1,14 +1,17 @@
 <div class="card">
+
+  <h1 class="title">Settings</h1>
+
   <div class="card-column-container">
-      
+
     <div class="card-column-container__column-left">
+
       <div class="column-content">
-        <h1 class="column-content__header">Settings</h1>
-        <h2>Change e-mail</h2>
+        
+        <h2>Change email</h2>
 
         <%= form_for @email_changeset, Routes.user_settings_path(@conn, :update_email), fn f -> %>
           <%= if @email_changeset.action do %>
-            <%#= TODO: STYLE THESE ERROR MESSAGES %>
             <div class="message-card error">
               <p>Oops, something went wrong! Please check the errors below.</p>
             </div>
@@ -22,19 +25,21 @@
           <%= password_input f, :current_password, required: true, name: "current_password", id: "current_password_for_email" %>
           <%= error_tag f, :current_password %>
 
-          <div>
-            <%= submit "Change e-mail" %>
+          <div class="button-container-vertical">
+            <%= submit "Change email", [class: "button primary"] %>
           </div>
         <% end %>
 
-        <br />
-        <br />
+        
+      </div>
+    </div>
 
+    <div class="card-column-container__column-right">
+      <div class="column-content">
         <h2>Change password</h2>
 
         <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update_password), fn f -> %>
           <%= if @password_changeset.action do %>
-            <%#= TODO: STYLE THESE ERROR MESSAGES %>
             <div class="message-card error">
               <p>Oops, something went wrong! Please check the errors below.</p>
             </div>
@@ -52,8 +57,8 @@
           <%= password_input f, :current_password, required: true, name: "current_password", id: "current_password_for_password" %>
           <%= error_tag f, :current_password %>
 
-          <div>
-            <%= submit "Change password" %>
+          <div class="button-container-vertical">
+            <%= submit "Change password", [class: "button primary"] %>
           </div>
         <% end %>
       </div>
