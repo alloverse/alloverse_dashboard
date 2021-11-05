@@ -1,5 +1,5 @@
   <%= if @current_user do %>
-  <div class="card message-box">
+  <div class="message-card info">
     <h1>Welcome to Alloverse Places!</h1>
     <p>
       Here, you’ll find places hosted by Alloverse’s own servers. If

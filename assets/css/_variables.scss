@@ -113,7 +113,7 @@ $av-padding-half: calc(#{$av-padding-base}/2);
 
 /* Standard animation specification */
 /* TODO: Improve performance by only animating things that matter, i.e. not "all" */
-$av-standard-animation: all ease-in-out 0.15s;
+$av-standard-animation: background-color ease-in-out 0.15s;
 
 
 /* Standard box shadow */

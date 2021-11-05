@@ -68,20 +68,33 @@
 
 
 /* -------------------------------------------------------------------------- */
-/* Standard message box  */
+/* Standard message box for info & error messages  */
 /* -------------------------------------------------------------------------- */
 
-.card.message-box {
-  margin-bottom: 64px;
+.message-card {
+  // Alternate styling:
+  // position: absolute;
+  // top:0;
+  // left:0;
+  // width: 100vw;
+  // margin:0;
+
+  background: $allo-color-info-75;
   color: $allo-color-text;
+  
+  margin-bottom: 64px;
   font-size: $av-font-size-base;
   line-height: 22px;
   border-radius: 0;
   padding: $av-padding-triple;
-  background: $allo-color-info-75;
 
   & > :last-child {
     margin-bottom: 0;
+  }
+
+  &.info {
+    background: $allo-color-info-75;
+    color: $allo-color-text;
   }
 
   &.error {
@@ -89,24 +102,3 @@
     color: $allo-color-light;
   }
 }
-
-
-
-// .message-panel {
-//   position: sticky;
-//   box-sizing: border-box;
-//   top: 0;
-//   width: 100vw;
-//   color: $av-color-message-bg;
-//   padding: 36px 36px 24px 36px;
-//   z-index: 1; //current highest
-
-//   &.warning {
-//     background: $av-color-warning;
-//   }
-
-//   &.error {
-//     background: $av-color-error;
-//     color: #fff;
-//   }
-// }
