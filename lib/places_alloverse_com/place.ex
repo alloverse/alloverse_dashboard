@@ -10,6 +10,7 @@ defmodule PlacesAlloverseCom.Places.Place do
     field :public, :boolean, default: false
     field :recommended, :boolean, default: false
     belongs_to :user, User
+    field :url, :string
 
     timestamps()
   end
