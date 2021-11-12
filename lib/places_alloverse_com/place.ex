@@ -11,6 +11,7 @@ defmodule PlacesAlloverseCom.Places.Place do
     field :recommended, :boolean, default: false
     belongs_to :user, User
     field :url, :string
+    filed :image_url, :string
 
     timestamps()
   end
