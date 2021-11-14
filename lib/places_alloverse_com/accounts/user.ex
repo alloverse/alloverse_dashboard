@@ -17,7 +17,7 @@ defmodule PlacesAlloverseCom.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :username])
+    |> cast(attrs, [:name, :username, :admin])
     |> validate_required([:name, :username])
     |> unique_constraint(:username)
   end
