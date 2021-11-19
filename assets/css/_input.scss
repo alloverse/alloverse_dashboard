@@ -97,22 +97,26 @@ button, .button {
     color: $allo-color-dark;
     &:hover {
       text-decoration: none;
-      background: $allo-color-light-alt-95;
+      background: $allo-color-light-alt;
       border-color: $allo-color-dark;
       outline: 1px solid $allo-color-dark;
     }
-    &:active {}
+    &:active {
+
+    }
   }
   
 
   &.primary {
-    background: $allo-color-primary;
-    color: $allo-color-dark;
+    background: $allo-color-dark;
+    color: $allo-color-white;
     &:hover {
-      background: $allo-color-primary-alt;
-      outline: 1px solid $allo-color-dark;
+      background: $allo-color-dark-60;
+      outline: 1px solid $allo-color-white;
     }
-    &:active {}
+    &:active {
+      background: $allo-color-light-30;
+    }
   }
 
   &.header {

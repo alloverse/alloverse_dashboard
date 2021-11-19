@@ -6,6 +6,12 @@
   margin: 0 0 18px 0;
   transition: $av-standard-animation;
   border-radius: $av-border-radius-double;
+
+  // border: 2px;
+  // border-style: solid;
+  // border-color: transparent;
+
+  outline: 1px solid transparent;
   
   .title {
     font-size: 26px;
@@ -35,35 +41,58 @@
     background: $allo-color-neutral;
 
     &:hover {
-
+      background: $allo-color-neutral-hover;
     }
     
     &:focus {
-      
+      background: $allo-color-neutral-focus;
+      border-color: $allo-color-dark;
     }
 
     .title {
-      color: $allo-color-white;
-    }
-  
-    .subtitle {
-      color: $allo-color-white;
-    }
-  }
-
-  &.primary {
-    background: $allo-color-primary;
-
-    .title {
-      color: $allo-color-dark;
+      color: $allo-color-text;
     }
   
     .subtitle {
       color: $allo-color-gray;
     }
+  }
 
-    &.disabled {
-
+  &.primary {
+    background: $allo-color-primary;
+    .title {
+      color: $allo-color-dark;
     }
+    .subtitle {
+      color: $allo-color-gray;
+    }
+
+    &:hover {
+      background: $allo-color-dark-60;
+      .title {
+        color: $allo-color-white;
+      }
+      .subtitle {
+        color: $allo-color-gray;
+      }
+    }
+
+    &:active {
+      background: $allo-color-dark-60;
+      outline: 1px solid $allo-color-light;
+      .title {
+        color: $allo-color-white;
+      }
+      .subtitle {
+        color: $allo-color-gray;
+      }
+    }
+
+  }
+
+  &.disabled {
+    background: rgba(179, 189, 216, 0.6); //TODO: Get rid of this hardcoded color
+    color: $allo-color-white;
+    cursor: not-allowed;
   }
 }

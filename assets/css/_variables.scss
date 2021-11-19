@@ -111,11 +111,11 @@ $av-padding-half: calc(#{$av-padding-base}/2);
 
 /* Standard animation specification */
 /* TODO: Improve performance by only animating things that matter, i.e. not "all" */
-$av-standard-animation: background-color ease-in-out 0.15s;
+$av-standard-animation: all ease-in-out 0.15s;
 
 
 /* Standard box shadow */
-$av-color-card-shadow: rgba(51, 111, 121, 0.07);
+$av-color-card-shadow: rgba(0, 0, 0, 0.04);
 $av-box-shadow-base:  0 1px 2px $av-color-card-shadow, 
                       0 2px 4px $av-color-card-shadow, 
                       0 4px 8px $av-color-card-shadow, 

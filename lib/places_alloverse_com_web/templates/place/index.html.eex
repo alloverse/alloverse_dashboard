@@ -25,7 +25,7 @@
 
           <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
 
-            <%= link to: "/place/#{recommended_place.id}", class: "card neutral" do %>
+            <%= link to: "/place/#{recommended_place.id}", class: "card primary" do %>
               <div class="title"><%= recommended_place.name %></div>
               <div class="subtitle">Created <%= recommended_place.user.name %></div>
             <% end %>
@@ -45,7 +45,7 @@
 
           <%= Enum.map(@public_places, fn(public_place) -> %>
 
-            <%= link to: "/place/#{public_place.id}", class: "card neutral" do %>
+            <%= link to: "/place/#{public_place.id}", class: "card primary" do %>
               <div class="title"><%= public_place.name%></div>
               <div class="subtitle">Created by <%= public_place.user.name%></div>
             <% end %>
@@ -73,7 +73,7 @@
         <% end %>
       <% end )%>
 
-        <%= link to: "/place/new", class: "card primary" do %>
+        <%= link to: "/place/new", class: "card neutral" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Create your own place!</div>
         <% end %>
@@ -85,7 +85,8 @@
       <div class="room-list__title">
           Private
       </div>
-        <%= link to: "/", class: "card primary" do %>
+        <span class="card disabled">
+        <%= link to: "/", class: "card disabled" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Coming soon!</div>
         <% end %>
@@ -96,9 +97,9 @@
           Private
       </div>
 
-        <%= link to: "/user/new", class: "card create-account" do %>
+        <%= link to: "/user/new", class: "card primary" do %>
           <div class="title">Create an account</div>
-          <div class="subtitle">Soon you can make your own place</div>
+          <div class="subtitle">Stay in the loop! We'll notify you as soon as you'll able to create your own Place.</div>
         <% end %>
     <% end %>
   </div>
