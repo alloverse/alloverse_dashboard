@@ -22,8 +22,9 @@
           <%= if @current_user && (@place.user.id === @current_user.id) do link("Edit", to: "/place/#{@place.id}/edit", class: "button neutral large") end %>
           <%= if @current_user && (@place.user.id === @current_user.id) do link "Delete", to: "/place/#{@place.id}", method: :delete, data: [confirm: "Are you sure you want to delete this place?"], class: "button neutral large" end %>
 
-          <div class="button large primary">Join (N/A)</div>
-          <%= if @url do link( "Join", to: {:alloplace, @url}) end %>
+          <a href="<%= @url %>">
+            <div class="button large primary">Join Place</div>
+          </a>
         </div>
       </div>
     </div>
