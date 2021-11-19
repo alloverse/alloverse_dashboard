@@ -2,9 +2,8 @@
   <div class="message-card info">
     <h1>Welcome to Alloverse Places!</h1>
     <p>
-      Here, you’ll find places hosted by Alloverse’s own servers. If
-      you’re tech savvy, you can also create and host your own server by
-      following the instructions <a href="#">here</a>.
+      Browse Places hosted on Alloverse’s own servers! <a href="https://alloverse.com/download/">Download the desktop client</a> in order to join one!
+      Soon, you can come here to create Places for others to join, too.
     </p>
   </div>
   <% end %>
