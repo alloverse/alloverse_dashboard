@@ -1,6 +1,5 @@
 .card {
   display: block;
-  //background: #fff;
   background: rgba(229, 203, 250, 0.6);
 
   box-shadow: $av-box-shadow-base;
@@ -33,7 +32,15 @@
   }
 
   &.neutral {
-    background: $allo-color-neutral-85;
+    background: $allo-color-neutral;
+
+    &:hover {
+
+    }
+    
+    &:focus {
+      
+    }
 
     .title {
       color: $allo-color-white;
@@ -45,7 +52,7 @@
   }
 
   &.primary {
-    background: $allo-color-primary-90;
+    background: $allo-color-primary;
 
     .title {
       color: $allo-color-dark;
@@ -53,6 +60,10 @@
   
     .subtitle {
       color: $allo-color-gray;
+    }
+
+    &.disabled {
+
     }
   }
 }
