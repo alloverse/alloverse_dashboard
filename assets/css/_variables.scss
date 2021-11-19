@@ -5,51 +5,56 @@
 
 
 /* Color variables  */
-$allo-color-dark: #0C2B48;
-$allo-color-dark-80: rgba(12, 43, 72, 0.8);
+$allo-color-dark: #0A223A;
+$allo-color-dark-60: rgba(10, 34, 58, 0.6);
 
 $allo-color-light: #D4F2FC;
 $allo-color-light-90: rgba(212, 242, 252, 0.9);
-$allo-color-light-80: rgba(212, 242, 252, 0.8);
 $allo-color-light-60: rgba(212, 242, 252, 0.6);
 $allo-color-light-30: rgba(212, 242, 252, 0.3);
 
-$allo-color-light-alt: #E5CBFA;
-$allo-color-light-alt-95: rgba(229, 203, 250, .95);
-
-$allo-color-primary: $allo-color-light-90;
-$allo-color-primary-90: $allo-color-light-90;
+$allo-color-white: #fff;
+$allo-color-white-90: rgba(255, 255, 255, 0.9);
+$allo-color-white-60: rgba(255, 255, 255, 0.6);
 
 $allo-color-primary-alt: #B1CAE8;
-$allo-color-primary-alt-80: rgba(177, 202, 232, 0.8);
-
-$allo-color-neutral: #B88ED8;
-$allo-color-neutral-95: rgba(184, 142, 216, .95);
-$allo-color-neutral-85: rgba(184, 142, 216, .85);
-
-$allo-color-white: #fff;
+$allo-color-primary-alt-90: rgba(177, 202, 232, 0.9);
 
 $allo-color-gray: #85919B;
 
 $allo-color-grayblue: #6E8FAE;
 
-$allo-color-info: $allo-color-light;
-$allo-color-info-75: rgba(212, 242, 252, .75);
+$allo-color-light-alt: #E5CBFA;
+$allo-color-light-alt-60: rgba(229, 203, 250, .95);
 
-$allo-color-error: $allo-color-dark-80;
+$allo-color-red: #B60000;
 
+
+
+/* Where they're actually used */
+
+$allo-color-primary: $allo-color-light-90;
+$allo-color-primary-hover: $allo-color-dark-60;
+$allo-color-primary-focus: $allo-color-dark-60;
+
+$allo-color-neutral: $allo-color-white-90;
+$allo-color-neutral-hover: $allo-color-white-60;
+$allo-color-neutral-focus: $allo-color-white-60;
+
+$allo-color-default: $allo-color-light-90;
+$allo-color-default-hover: $allo-color-light-60;
+$allo-color-default-focus: $allo-color-light-30;
 
 
 
 /* Input Fields */
-/* Background */
 $allo-color-input-bg: transparent;
-$allo-color-input-bg-hover: $allo-color-light-30;
-$allo-color-input-bg-focus: $allo-color-light-60;
-/* Border */
-$allo-color-input-border: $allo-color-light;
+$allo-color-input-bg-hover: $allo-color-light-60;
+$allo-color-input-bg-focus: $allo-color-light-90;
+$allo-color-input-border: $allo-color-dark;
 $allo-color-input-border-hover: $allo-color-dark;
 $allo-color-input-border-focus: $allo-color-dark;
+$allo-color-input-placeholder: $allo-color-light;
 
 
 /* Text colors */
@@ -64,16 +69,9 @@ $allo-font-size-base: 0.8rem;
 $allo-font-size-large: 1rem;
 $allo-font-size-small: 0.6rem;
 
-
-
-$av-color-error: #CF3720;
-$av-color-warning: #fc6;
-$av-color-message-bg: #1f2526;
-
-$av-color-card-shadow: rgba(51, 111, 121, 0.07);
-
-
-
+/* Info, Error & Warning messages, etc */
+$allo-color-error: $allo-color-red;
+$allo-color-info: $allo-color-light;
 
 
 
@@ -117,6 +115,7 @@ $av-standard-animation: background-color ease-in-out 0.15s;
 
 
 /* Standard box shadow */
+$av-color-card-shadow: rgba(51, 111, 121, 0.07);
 $av-box-shadow-base:  0 1px 2px $av-color-card-shadow, 
                       0 2px 4px $av-color-card-shadow, 
                       0 4px 8px $av-color-card-shadow, 
