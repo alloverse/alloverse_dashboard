@@ -19,7 +19,7 @@ defmodule PlacesAlloverseCom.Places.Place do
   @doc false
   def changeset(place, attrs) do
     place
-    |> cast(attrs, [:name, :description, :public, :recommended])
+    |> cast(attrs, [:name, :description, :public, :recommended, :url, :image_url])
     |> validate_required([:name, :description, :public])
   end
 end

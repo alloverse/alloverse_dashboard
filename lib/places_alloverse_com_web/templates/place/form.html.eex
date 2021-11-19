@@ -6,7 +6,7 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-  
+
   <%= label f, :name, "Place name" %>
   <%= text_input f, :name, placeholder: "Place name here" %>
   <%= error_tag f, :name %>
@@ -17,9 +17,21 @@
   <%= textarea f, :description, placeholder: "Short description of the place here" %>
   <%= error_tag f, :description %>
 
-  
+  <%= label f, :url, "Place url" %>
+  <%= text_input f, :url, placeholder: "Place url here" %>
+  <%= error_tag f, :url %>
+
+  <%= label f, :image_url, "Image url" %>
+  <%= text_input f, :image_url, placeholder: "Place image url here" %>
+  <%= error_tag f, :image_url %>
+
+
   <%= checkbox f, :public %>
   <%= label f, :public, "Make this place public" %>
+
+  <%= checkbox f, :recommended %>
+  <%= label f, :recommended, "Recommend this place" %>
+
 
   <div class="button-container-vertical">
     <%= submit "Save", [class: "button primary"] %>
