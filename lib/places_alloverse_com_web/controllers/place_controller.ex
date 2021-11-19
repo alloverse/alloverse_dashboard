@@ -29,7 +29,8 @@ defmodule PlacesAlloverseComWeb.PlaceController do
   def show(conn, %{"id" => id}) do
     place = Places.get_place!(id)
     url = place.url
-    render(conn, "show.html", place: place, url: url)
+    image_url = place.image_url
+    render(conn, "show.html", place: place, url: url, image_url: image_url)
   end
 
   def new(conn, _params) do
