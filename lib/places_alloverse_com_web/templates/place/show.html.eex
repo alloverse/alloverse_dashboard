@@ -30,7 +30,7 @@
     </div>
 
     <div class="card-column-container__column-right">
-      <img src="http://placekitten.com/800/800" />
+      <img src="<%= @image_url %>" />
     </div>
   </div>
 </div>
