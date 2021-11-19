@@ -2,7 +2,6 @@ body {
   margin: 0;
   height: 100vh;
   
-  
   background: #8BA0D2 url("/images/bg_purple.png") no-repeat top;
 
   background-attachment: fixed;
@@ -41,6 +40,10 @@ body {
     font-size: 30px;
     display: flex;
     align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     &__logo {
       height: 48px;

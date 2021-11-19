@@ -106,6 +106,19 @@ button, .button {
     }
   }
   
+  &.default {
+    background: $allo-color-light-90;
+    color: $allo-color-dark;
+    &:hover {
+      text-decoration: none;
+      background: $allo-color-light-60;
+      border-color: $allo-color-dark;
+      outline: 1px solid $allo-color-dark;
+    }
+    &:active {
+      background: $allo-color-light-30;
+    }
+  }
 
   &.primary {
     background: $allo-color-dark;
