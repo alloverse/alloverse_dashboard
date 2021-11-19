@@ -10,6 +10,7 @@ defmodule PlacesAlloverseComWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
+    plug :fetch_admin_user
   end
 
   pipeline :api do
@@ -34,7 +35,6 @@ defmodule PlacesAlloverseComWeb.Router do
 
     get "/", PageController, :index
     resources "/place", PlaceController, only: [:show, :index, :delete]
-    resources "/user", UserController
     resources "/sessions", SessionController, only: [:new, :create, :delete],
                                               singleton: true
     get "/login", UserController, :login
@@ -80,6 +80,12 @@ defmodule PlacesAlloverseComWeb.Router do
     put "/users/settings/update_password", UserSettingsController, :update_password
     put "/users/settings/update_email", UserSettingsController, :update_email
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+  end
+
+  scope "/", PlacesAlloverseComWeb do
+    pipe_through [:browser, :require_authenticated_user, :require_admin_user]
+
+    resources "/user", UserController
   end
 
   scope "/", PlacesAlloverseComWeb do
