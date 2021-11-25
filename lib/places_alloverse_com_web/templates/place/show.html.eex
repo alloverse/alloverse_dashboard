@@ -34,7 +34,7 @@
     </div>
 
     <div class="card-column-container__column-right">
-      <% if @image_url do %>
+      <%= if @image_url do %>
         <img src="<%= @image_url %>" />
       <% end %>
     </div>
