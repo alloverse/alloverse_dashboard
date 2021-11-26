@@ -9,57 +9,53 @@
   </head>
   <body>
 
-  <%# TODO: Display this error message panel if something goes wrong %>
-  <%# <div class="message-panel error">
-    <h3>Something went wrong</h3>
-    <p>Sike! It's just a test error message!</p>
-  </div> %>
-
-
     <div class="wrapper">
       <div class="main-container">
-        <div class="header">
+        <div class="page-header">
 
-          <%= link to: "/", class: "header__title" do %>
-            <img class="header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-logo.png") %>" />
+          <%= link to: "/", class: "page-header__title" do %>
+            <img class="page-header__title__logo" src="<%= Routes.static_path(@conn, "/images/alloverse-dashboard-logo-48.png") %>" />
             <span>
               Alloverse <strong>Places</strong>    
             </span>
           <% end %>
 
-          <div class="header__buttons">
+          <div class="page-header__buttons">
           
           <%= if @current_user do %>
           <div class="dropdown-container">
-            <a class="button image">
+            <div class="button header">
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg") " /> %>
               <%= @current_user.name %>
-            </a>
+            </div>
             <div class="dropdown-content">
               <%= link "Settings", to: Routes.user_settings_path(@conn, :edit) %>
+
               <%= form_for @conn, Routes.session_path(@conn, :delete), [method: :delete, as: :user], fn _ -> %>
-                <%# <div class="button"> %>
-                  <%= submit "Log Out", [class: "button"] %>
-                <%# </div> %>
+                <%= submit "Log Out", [class: "link"] %>
               <% end %>
             </div>
           </div>
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg")" /> %>
                 
             <% else %>
-              <%= link("Create Account", to: "/user/new", class: "button")%>
-              <%= link("Log In", to: "/sessions/new", class: "button")%>
+              <%= link("Create Account", to: "/user/new", class: "button header")%>
+              <%= link("Log In", to: "/sessions/new", class: "button header")%>
             <% end %>
           </div>
         </div>
 
-        <%= if get_flash(@conn, :info) || get_flash(@conn, :error) do %>
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <%= if get_flash(@conn, :info) do %>
+          <div class="message-card info" role="info"><%= get_flash(@conn, :info) %></div>
         <% end %>
 
-        <%= render @view_module, @view_template, assigns %>
-    
+        <%= if get_flash(@conn, :error) do %>
+          <div class="message-card error" role="alert"><%= get_flash(@conn, :error) %></div>
+        <% end %>
+
+        <%# <%= render @view_module, @view_template, assigns %>
+         <%= @inner_content %>
+
       </div>
     </div>
     

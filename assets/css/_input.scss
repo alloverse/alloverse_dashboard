@@ -2,35 +2,55 @@
 
 .form-container {
 
-  & > * {
-    margin-bottom: $av-padding-base;
-  }
+  // & > * {
+  //   margin-bottom: $allo-padding-base;
+  // }
+
+  margin-top: 12px;
 
   &:last-child {
     margin-bottom: 0;
   }
-
 }
 
 
+label {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: $allo-color-dark;
+}
+
 input[type=text],input[type=password],textarea {
   box-sizing: border-box;
-
   width: 100%;
   max-width: 100%;
+  padding: $allo-padding-base;
+  border-radius: $allo-border-radius-half;
+  color: $allo-color-text;
+  font-size: $allo-font-size-base;
 
-  border: 1px solid $av-color-teal-superlight;
-  background: $av-color-input-background;
-  
-  font-size: $av-font-size-base;
-  padding: $av-padding-base;
+  border: 1px solid $allo-color-input-border;
+  background: $allo-color-input-bg;
+
+  &:hover {
+    border-color: $allo-color-text;
+    background: $allo-color-input-bg-hover;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    border-color: $allo-color-text;
+    background: $allo-color-input-bg-focus;
+  }
 
   &::placeholder {
-    color: $av-color-teal-superlight;
+    color: $allo-color-input-placeholder;
   }
 
   &.error {
-    border-color: $av-color-error;
+    border-color: $allo-color-error;
   }
 }
 
@@ -39,14 +59,94 @@ textarea {
 }
 
 
-.input-message {
-  font-size: $av-font-size-small;
-  border-left-width: 3px;
-  border-left-style: solid;
-  padding-left: 12px;
+.inline-form-validation-message {
+  font-size: $allo-font-size-small;
+  color: $allo-color-error;
+  border-color: $allo-color-error;
+  margin-top: 3px;
+}
+
+.forgot-password-container {
+  margin-top: 12px;
+}
+
+
+
+
+
+button, .button {
+  display: block;
+  color: $allo-color-dark;
+  text-transform: uppercase;
+  font-size: $allo-font-size-base;
+  font-weight: $allo-font-weight-bold;
+  text-align: center;
+  border-radius: $allo-border-radius-double;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: 0;
+  outline: 0;
+
+  transition: $allo-standard-animation;
+
+  position: relative;
+
+
+  &.neutral {
+    background: $allo-color-neutral;
+    color: $allo-color-dark;
+    &:hover {
+      text-decoration: none;
+      background: $allo-color-light-alt;
+      border-color: $allo-color-dark;
+      outline: 1px solid $allo-color-dark;
+    }
+    &:active {
+
+    }
+  }
   
-  &.error {
-    color: $av-color-error;
-    border-color: $av-color-error;
+  &.default {
+    background: $allo-color-light-90;
+    color: $allo-color-dark;
+    &:hover {
+      text-decoration: none;
+      background: $allo-color-light-60;
+      border-color: $allo-color-dark;
+      outline: 1px solid $allo-color-dark;
+    }
+    &:active {
+      background: $allo-color-light-30;
+    }
+  }
+
+  &.primary {
+    background: $allo-color-dark;
+    color: $allo-color-white;
+    &:hover {
+      background: $allo-color-dark-60;
+      outline: 1px solid $allo-color-white;
+    }
+    &:active {
+      background: $allo-color-light-30;
+    }
+  }
+
+  &.header {
+    background: $allo-color-dark;
+    color: $allo-color-light;
+    &:hover {
+      background: $allo-color-light-30;
+      color: $allo-color-dark;
+    }
+    &:active {}
+  }
+
+  &.large {
+    font-size: $allo-font-size-large;
+  }
+
+  &.full-width {
+    width: 100%;
   }
 }

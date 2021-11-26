@@ -1,22 +1,78 @@
 
-/* Standard colors */
 
-$av-color-teal: #336f79;
-$av-color-teal-dark: #4d777e;
-$av-color-teal-light: #64939e;
-$av-color-teal-superlight: #B4C6D4;
-$av-color-yellow: #ffe259;
-$av-color-yellow-superlight: #fff0a7;
 
-$av-color-orange: #e66c48;
-$av-color-orange-dark: #c04c2a;
 
-$av-color-error: #CF3720;
-$av-color-warning: #fc6;
-$av-color-message-bg: #1f2526;
 
-$av-color-card-shadow: rgba(51, 111, 121, 0.07);
-$av-color-input-background: rgba(180, 198, 212, 0.1);
+
+/* Color variables  */
+$allo-color-dark: #0A223A;
+$allo-color-dark-60: rgba(10, 34, 58, 0.6);
+
+$allo-color-light: #D4F2FC;
+$allo-color-light-90: rgba(212, 242, 252, 0.9);
+$allo-color-light-60: rgba(212, 242, 252, 0.6);
+$allo-color-light-30: rgba(212, 242, 252, 0.3);
+
+$allo-color-white: #fff;
+$allo-color-white-90: rgba(255, 255, 255, 0.9);
+$allo-color-white-60: rgba(255, 255, 255, 0.6);
+
+$allo-color-primary-alt: #B1CAE8;
+$allo-color-primary-alt-90: rgba(177, 202, 232, 0.9);
+
+$allo-color-gray: #85919B;
+
+$allo-color-grayblue: #6E8FAE;
+
+$allo-color-light-alt: #E5CBFA;
+$allo-color-light-alt-60: rgba(229, 203, 250, .95);
+
+$allo-color-red: #B60000;
+
+
+
+/* Where they're actually used */
+
+$allo-color-primary: $allo-color-light-90;
+$allo-color-primary-hover: $allo-color-dark-60;
+$allo-color-primary-focus: $allo-color-dark-60;
+
+$allo-color-neutral: $allo-color-white-90;
+$allo-color-neutral-hover: $allo-color-white-60;
+$allo-color-neutral-focus: $allo-color-white-60;
+
+$allo-color-default: $allo-color-light-90;
+$allo-color-default-hover: $allo-color-light-60;
+$allo-color-default-focus: $allo-color-light-30;
+
+
+
+/* Input Fields */
+$allo-color-input-bg: transparent;
+$allo-color-input-bg-hover: $allo-color-light-60;
+$allo-color-input-bg-focus: $allo-color-light-90;
+$allo-color-input-border: $allo-color-dark;
+$allo-color-input-border-hover: $allo-color-dark;
+$allo-color-input-border-focus: $allo-color-dark;
+$allo-color-input-placeholder: $allo-color-light;
+
+
+/* Text colors */
+$allo-color-text: #0C2B48;
+$allo-color-link: #0C2B48;
+
+
+/* Typography */
+//@font-face { font-family: Sen; src: url('/assets/fonts/Sen/Sen-Regular.ttf'); } 
+$allo-font-default: "Sen", "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$allo-font-size-base: 0.8rem;
+$allo-font-size-large: 1rem;
+$allo-font-size-small: 0.6rem;
+
+/* Info, Error & Warning messages, etc */
+$allo-color-error: $allo-color-red;
+$allo-color-info: $allo-color-light;
+
 
 
 /* Standard border width for highlighted cards */
@@ -25,42 +81,44 @@ $card-highlight-border-width: 3px;
 
 
 /* Border radii */
-$av-border-radius-base: 12px;
-$av-border-radius-double: calc(2 * #{$av-border-radius-base});
-$av-border-radius-triple: calc(3 * #{$av-border-radius-base});
-$av-border-radius-quadruple: calc(4 * #{$av-border-radius-base});
+$allo-border-radius-base: 12px;
+$allo-border-radius-double: calc(2 * #{$allo-border-radius-base});
+$allo-border-radius-triple: calc(3 * #{$allo-border-radius-base});
+$allo-border-radius-quadruple: calc(4 * #{$allo-border-radius-base});
+$allo-border-radius-half: calc(#{$allo-border-radius-base} / 2);
 
-
-$av-font-color: $av-color-teal;
 
 /* Font sizes */
-$av-font-size-base: 17px;
-$av-font-size-small: 14px;
-$av-font-size-large: 22px;
+$allo-font-size-base: 1rem;
+$allo-font-size-small: 0.8rem;
+$allo-font-size-large: 1.2rem;
+$allo-font-size-huge: 1.6rem;
 
 
 /* Font weights */
-$av-font-weight-normal: 400;
-$av-font-weight-bold: 600;
+$allo-font-weight-normal: 400;
+$allo-font-weight-medium: 500;
+$allo-font-weight-bold: 600;
 
 
 /* Standard padding & margins */
-$av-padding-base: 12px;
-$av-padding-double: calc(2 * #{$av-padding-base});
-$av-padding-triple: calc(3 * #{$av-padding-base});
-$av-padding-quadruple: calc(4 * #{$av-padding-base});
-$av-padding-half: calc(#{$av-padding-base}/2);
+$allo-padding-base: 12px;
+$allo-padding-double: calc(2 * #{$allo-padding-base});
+$allo-padding-triple: calc(3 * #{$allo-padding-base});
+$allo-padding-quadruple: calc(4 * #{$allo-padding-base});
+$allo-padding-half: calc(#{$allo-padding-base}/2);
 
 
 /* Standard animation specification */
 /* TODO: Improve performance by only animating things that matter, i.e. not "all" */
-$av-standard-animation: all ease-in-out 0.15s;
+$allo-standard-animation: all ease-in-out 0.15s;
 
 
 /* Standard box shadow */
-$av-box-shadow-base:  0 1px 2px $av-color-card-shadow, 
-                      0 2px 4px $av-color-card-shadow, 
-                      0 4px 8px $av-color-card-shadow, 
-                      0 8px 16px $av-color-card-shadow,
-                      0 16px 32px $av-color-card-shadow, 
-                      0 32px 64px $av-color-card-shadow;
+$allo-color-card-shadow: rgba(0, 0, 0, 0.04);
+$allo-box-shadow-base:  0 1px 2px $allo-color-card-shadow, 
+                      0 2px 4px $allo-color-card-shadow, 
+                      0 4px 8px $allo-color-card-shadow, 
+                      0 8px 16px $allo-color-card-shadow,
+                      0 16px 32px $allo-color-card-shadow, 
+                      0 32px 64px $allo-color-card-shadow;

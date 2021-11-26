@@ -11,13 +11,13 @@ defmodule PlacesAlloverseCom.Places do
 
 
   def list_recommended_places do
-      Repo.all(from p in Place, where: p.recommended == true, limit: 3)
-      |> Repo.preload(:user)
+    Repo.all(from p in Place, where: p.recommended == true, limit: 3)
+    |> Repo.preload(:user)
   end
 
   def list_public_places do
-      Repo.all(from p in Place, where: p.public == true, limit: 3)
-      |> Repo.preload(:user)
+    Repo.all(from p in Place, where: p.public == true, limit: 3)
+    |> Repo.preload(:user)
   end
 
   def list_my_places(%User{} = user) do
@@ -52,6 +52,4 @@ defmodule PlacesAlloverseCom.Places do
     |> Place.changeset(attrs)
     |> Repo.update()
   end
-
-
 end

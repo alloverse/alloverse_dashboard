@@ -3,6 +3,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
 
   alias PlacesAlloverseCom.Places
   alias PlacesAlloverseCom.Places.Place
+  alias PlacesAlloverseCom.Accounts
 
 
   def index(conn, _params) do
@@ -16,12 +17,20 @@ defmodule PlacesAlloverseComWeb.PlaceController do
       {:ok, current_user} -> Places.list_my_places(current_user)
     end
 
-    render(conn, "index.html", recommended_places: recommended_places, public_places: public_places, my_places: my_places)
+    admin_user = case Map.fetch(conn.assigns, :current_user) do
+      {:ok, nil} -> []
+      {:ok, current_user} -> current_user.admin
+
+    end
+
+    render(conn, "index.html", recommended_places: recommended_places, public_places: public_places, my_places: my_places, admin_user: admin_user)
   end
 
   def show(conn, %{"id" => id}) do
     place = Places.get_place!(id)
-    render(conn, "show.html", place: place)
+    url = place.url
+    image_url = place.image_url
+    render(conn, "show.html", place: place, url: url, image_url: image_url)
   end
 
   def new(conn, _params) do
@@ -72,7 +81,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
 
     place = Places.get_place!(id)
 
-    if Enum.member?(my_place_ids, id) do
+    if Enum.member?(my_place_ids, String.to_integer(id)) do
       {:ok, _place} = Places.delete_place(place)
 
       conn
@@ -95,7 +104,7 @@ defmodule PlacesAlloverseComWeb.PlaceController do
     my_place_ids = Enum.map(my_places, fn my_place -> my_place.id end)
     place = Places.get_place!(id)
 
-    if Enum.member?(my_place_ids, id) do
+    if Enum.member?(my_place_ids, String.to_integer(id)) do
       case Places.update_place(place, place_params) do
         {:ok, place} ->
           conn

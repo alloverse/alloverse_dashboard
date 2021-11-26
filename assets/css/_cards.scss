@@ -1,63 +1,98 @@
 .card {
   display: block;
-  background: #fff;
-  box-shadow: $av-box-shadow-base;
+  background: rgba(229, 203, 250, 0.6);
+
+  box-shadow: $allo-box-shadow-base;
   margin: 0 0 18px 0;
-  transition: $av-standard-animation;
-  border-radius: $av-border-radius-quadruple;
+  transition: $allo-standard-animation;
+  border-radius: $allo-border-radius-double;
+
+  // border: 2px;
+  // border-style: solid;
+  // border-color: transparent;
+
+  outline: 1px solid transparent;
   
+  .title {
+    font-size: 26px;
+    font-weight: $allo-font-weight-bold;
+  }
+
+  .subtitle {
+    font-weight: $allo-font-weight-medium;
+    font-size: $allo-font-size-small;
+    line-height: 20px;
+  }
+
   // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
   @at-root {
     a#{&} {
-      border-radius: $av-border-radius-base;
+      border-radius: $allo-border-radius-base;
       cursor: pointer;
-      border-width: 3px;
-      border-style: solid;
       padding: 29px;
-      border-color: #fff;
 
       &:hover {  
-        //padding: 29px;
-        //border-width: $card-highlight-border-width;
-        border-color: $av-color-teal;
         text-decoration: none;
       }
     }
   }
 
-  .title {
-    font-size: 26px;
-    font-weight: $av-font-weight-bold;
-  }
-
-  .subtitle {
-    font-weight: $av-font-weight-normal;
-    font-size: $av-font-size-small;
-    line-height: 20px;
-    color: #85a9af;
-  }
-
-  &.create-place {
-    background: $av-color-teal-light;
-    border-color: $av-color-teal-dark;
-
-    .title,
-    .subtitle {
-      color: #fff;
-    }
-  }
-
-  &.create-account {
-    background: $av-color-orange;
-    border-color: $av-color-orange;
+  &.neutral {
+    background: $allo-color-neutral;
 
     &:hover {
-      border-color: $av-color-orange-dark;
+      background: $allo-color-neutral-hover;
+    }
+    
+    &:focus {
+      background: $allo-color-neutral-focus;
+      border-color: $allo-color-dark;
     }
 
-    .title,
-    .subtitle {
-      color: #fff;
+    .title {
+      color: $allo-color-text;
     }
+  
+    .subtitle {
+      color: $allo-color-gray;
+    }
+  }
+
+  &.primary {
+    background: $allo-color-primary;
+    .title {
+      color: $allo-color-dark;
+    }
+    .subtitle {
+      color: $allo-color-gray;
+    }
+
+    &:hover {
+      background: $allo-color-dark-60;
+      .title {
+        color: $allo-color-white;
+      }
+      .subtitle {
+        color: $allo-color-gray;
+      }
+    }
+
+    &:active {
+      background: $allo-color-dark-60;
+      outline: 1px solid $allo-color-light;
+      .title {
+        color: $allo-color-white;
+      }
+      .subtitle {
+        color: $allo-color-gray;
+      }
+    }
+
+  }
+
+  &.disabled {
+    background: rgba(179, 189, 216, 0.6); //TODO: Get rid of this hardcoded color
+    color: $allo-color-white;
+    cursor: not-allowed;
   }
 }

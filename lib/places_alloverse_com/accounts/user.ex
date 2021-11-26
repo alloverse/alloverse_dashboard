@@ -9,6 +9,7 @@ defmodule PlacesAlloverseCom.Accounts.User do
     field :username, :string
     has_one :credential, Credential
     has_many :places, Place
+    field :admin, :boolean, default: false
 
     timestamps()
   end
@@ -16,7 +17,7 @@ defmodule PlacesAlloverseCom.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :username])
+    |> cast(attrs, [:name, :username, :admin])
     |> validate_required([:name, :username])
     |> unique_constraint(:username)
   end

@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :places_alloverse_com, PlacesAlloverseCom.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Alloverse",
   database: "places_alloverse_com_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
@@ -16,7 +16,7 @@ config :places_alloverse_com, PlacesAlloverseCom.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :places_alloverse_com, PlacesAlloverseComWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: 4004],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,

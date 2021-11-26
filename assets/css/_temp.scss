@@ -2,15 +2,14 @@ body {
   margin: 0;
   height: 100vh;
   
-  //background: #c9eaef url("/images/places-bg@2x.jpg") no-repeat top;
-  background: #ffe259 url("/images/cloudy-sunset.png") no-repeat top; /* orange: #ffa751 */
+  background: #8BA0D2 url("/images/bg_purple.png") no-repeat top;
 
   background-attachment: fixed;
   background-size: cover;
 
-  color: $av-color-teal;
-  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  color: $allo-color-text; 
+  font-family: $allo-font-default;
+  font-size: $allo-font-size-base;
 }
 
 .wrapper {
@@ -19,15 +18,15 @@ body {
   justify-content: center;
 
   .main-container {
-    width: 840px;
+    width: 960px;
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-    margin-bottom:240px;
+    margin-top: 60px;
+    // margin-bottom:240px;
   }
 }
 
-.header {
+.page-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,10 +41,14 @@ body {
     display: flex;
     align-items: center;
 
+    &:hover {
+      text-decoration: none;
+    }
+
     &__logo {
       height: 48px;
       width: 48px;
-      margin-right: $av-padding-base;
+      margin-right: $allo-padding-base;
     }
   }
 
@@ -53,7 +56,7 @@ body {
     display: flex;
 
     & > * {
-      margin-left: $av-padding-base;
+      margin-left: $allo-padding-base;
     }
   }
 }
@@ -61,9 +64,12 @@ body {
 .content-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 
   .column {
-    width: 48%;
+    //width: 48%;
+
+    width: 100%;
 
     .room-list {
       display: flex;
@@ -72,8 +78,8 @@ body {
 
       &__title {
         margin: 24px 0 12px 0;
-        font-size: $av-font-size-small;
-        font-weight: $av-font-weight-bold;
+        font-size: $allo-font-size-small;
+        font-weight: $allo-font-weight-bold;
         text-transform: uppercase;
       }
     }

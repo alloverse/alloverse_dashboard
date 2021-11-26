@@ -9,7 +9,7 @@
         <div class="form-container">
           <input type="text" placeholder="Email" />
           
-          <div class="button">Send</div>  
+          <div class="button neutral">Send</div>  
         </div>
       </div>
     </div>

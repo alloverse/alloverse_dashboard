@@ -1,5 +1,17 @@
-<h2>Edit your Place</h2>
+<div class="card">
+  <div class="card-column-container">
+      
+    <div class="card-column-container__column-left">
+      <div class="column-content">
+        <span><%= link "< Back", to: Routes.place_path(@conn, :index) %></span>
+        
+        <br />
+        <br />
 
-<%= render "form.html", Map.put(assigns, :action, Routes.place_path(@conn, :update, @place)) %>
+        <h1 class="column-content__header">Edit Place</h1>
 
-<span><%= link "Back", to: Routes.place_path(@conn, :index) %></span>
+        <%= render "form.html", Map.put(assigns, :action, Routes.place_path(@conn, :update, @place)) %>  
+      </div>
+    </div>
+  </div>
+</div>

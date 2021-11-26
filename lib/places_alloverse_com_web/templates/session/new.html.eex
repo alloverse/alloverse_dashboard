@@ -7,15 +7,20 @@
         
         <%= form_for @conn, Routes.session_path(@conn, :create), [method: :post, as: :user, class: "form-container"], fn f -> %>
           
-          <%= text_input f, :email, placeholder: "Email" %>
+          <%= label f, :email, "What's your email?" %>
+          <%= text_input f, :email, placeholder: "email@example.com" %>
           
-          <%= password_input f, :password, placeholder: "Password" %>
+          <%= label f, :password, "Pick a password" %>
+          <%= password_input f, :password, placeholder: "" %>
           
-          <%= submit "Login", [class: "button full-width"] %>
-          
+          <div class="button-container-vertical">
+            <%= submit "Log in", [class: "button full-width primary"] %>
+          </div>
         <% end %>
 
-        <%= link "Forgot your password?", to: Routes.user_reset_password_path(@conn, :new) %>
+        <div class="forgot-password-container">
+          <%= link "Forgot your password?", to: Routes.user_reset_password_path(@conn, :new) %>
+        </div>
 
       </div>
     </div>

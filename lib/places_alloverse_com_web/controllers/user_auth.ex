@@ -92,6 +92,21 @@ alias PlacesAlloverseComWeb.Router.Helpers, as: Routes
     assign(conn, :current_user, user)
   end
 
+  @doc """
+  If the user is admin assign admin_user to conn
+  """
+
+  def fetch_admin_user(conn, _opts) do
+
+    admin_user = case Map.fetch(conn.assigns, :current_user) do
+      {:ok, nil} -> []
+      {:ok, current_user} -> current_user.admin
+    end
+
+    assign(conn, :admin_user, admin_user)
+  end
+
+
   defp ensure_user_token(conn) do
     if user_token = get_session(conn, :user_token) do
       {user_token, conn}
@@ -132,6 +147,23 @@ alias PlacesAlloverseComWeb.Router.Helpers, as: Routes
       |> put_flash(:error, "You must login to access this page.")
       |> maybe_store_return_to()
       |> redirect(to: Routes.session_path(conn, :new))
+      |> halt()
+    end
+  end
+
+  @doc """
+  Used for routes that require the user to be authenticated and admin.
+  If you want to enforce the user e-mail is confirmed before
+  they use the application at all, here would be a good place.
+  """
+  def require_admin_user(conn, _opts) do
+    if conn.assigns[:admin_user] do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be admin to access this page.")
+      |> maybe_store_return_to()
+      |> redirect(to: Routes.place_path(conn, :index))
       |> halt()
     end
   end
