@@ -35,6 +35,7 @@ defmodule PlacesAlloverseComWeb.Router do
 
     get "/", PageController, :index
     resources "/place", PlaceController, only: [:show, :index, :delete]
+    resources "/user", UserController, only: [:new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete],
                                               singleton: true
     get "/login", UserController, :login
