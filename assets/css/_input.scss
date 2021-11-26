@@ -3,7 +3,7 @@
 .form-container {
 
   // & > * {
-  //   margin-bottom: $av-padding-base;
+  //   margin-bottom: $allo-padding-base;
   // }
 
   margin-top: 12px;
@@ -26,10 +26,10 @@ input[type=text],input[type=password],textarea {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  padding: $av-padding-base;
-  border-radius: $av-border-radius-half;
+  padding: $allo-padding-base;
+  border-radius: $allo-border-radius-half;
   color: $allo-color-text;
-  font-size: $av-font-size-base;
+  font-size: $allo-font-size-base;
 
   border: 1px solid $allo-color-input-border;
   background: $allo-color-input-bg;
@@ -60,7 +60,7 @@ textarea {
 
 
 .inline-form-validation-message {
-  font-size: $av-font-size-small;
+  font-size: $allo-font-size-small;
   color: $allo-color-error;
   border-color: $allo-color-error;
   margin-top: 3px;
@@ -79,15 +79,15 @@ button, .button {
   color: $allo-color-dark;
   text-transform: uppercase;
   font-size: $allo-font-size-base;
-  font-weight: $av-font-weight-bold;
+  font-weight: $allo-font-weight-bold;
   text-align: center;
-  border-radius: $av-border-radius-double;
+  border-radius: $allo-border-radius-double;
   cursor: pointer;
   padding: 12px 24px;
   border: 0;
   outline: 0;
 
-  transition: $av-standard-animation;
+  transition: $allo-standard-animation;
 
   position: relative;
 

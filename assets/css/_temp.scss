@@ -48,7 +48,7 @@ body {
     &__logo {
       height: 48px;
       width: 48px;
-      margin-right: $av-padding-base;
+      margin-right: $allo-padding-base;
     }
   }
 
@@ -56,7 +56,7 @@ body {
     display: flex;
 
     & > * {
-      margin-left: $av-padding-base;
+      margin-left: $allo-padding-base;
     }
   }
 }
@@ -78,8 +78,8 @@ body {
 
       &__title {
         margin: 24px 0 12px 0;
-        font-size: $av-font-size-small;
-        font-weight: $av-font-weight-bold;
+        font-size: $allo-font-size-small;
+        font-weight: $allo-font-weight-bold;
         text-transform: uppercase;
       }
     }

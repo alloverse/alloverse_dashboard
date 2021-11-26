@@ -2,10 +2,10 @@
   display: block;
   background: rgba(229, 203, 250, 0.6);
 
-  box-shadow: $av-box-shadow-base;
+  box-shadow: $allo-box-shadow-base;
   margin: 0 0 18px 0;
-  transition: $av-standard-animation;
-  border-radius: $av-border-radius-double;
+  transition: $allo-standard-animation;
+  border-radius: $allo-border-radius-double;
 
   // border: 2px;
   // border-style: solid;
@@ -15,19 +15,19 @@
   
   .title {
     font-size: 26px;
-    font-weight: $av-font-weight-bold;
+    font-weight: $allo-font-weight-bold;
   }
 
   .subtitle {
-    font-weight: $av-font-weight-bold;
-    font-size: $av-font-size-small;
+    font-weight: $allo-font-weight-medium;
+    font-size: $allo-font-size-small;
     line-height: 20px;
   }
 
   // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
   @at-root {
     a#{&} {
-      border-radius: $av-border-radius-base;
+      border-radius: $allo-border-radius-base;
       cursor: pointer;
       padding: 29px;
 
