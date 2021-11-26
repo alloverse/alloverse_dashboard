@@ -4,7 +4,7 @@
   position: relative;
   display: inline-block;
 
-  transition: $av-standard-animation;
+  transition: $allo-standard-animation;
 
   &:hover {
     /* Show the dropdown menu on hover */
@@ -19,13 +19,13 @@
     position: absolute;
     right: 0;
     background-color: $allo-color-primary-alt-90;
-    border-radius: $av-border-radius-half;
+    border-radius: $allo-border-radius-half;
     min-width: 160px;
-    box-shadow: $av-box-shadow-base;
+    box-shadow: $allo-box-shadow-base;
     z-index: 1;
 
-    padding-top: $av-border-radius-base;
-    padding-bottom: $av-border-radius-base;
+    padding-top: $allo-border-radius-base;
+    padding-bottom: $allo-border-radius-base;
     
     /* Links inside the dropdown */
     a, button {
@@ -37,7 +37,7 @@
 
       &:hover {
         //background-color: $allo-color-light;
-        font-weight: $av-font-weight-bold;
+        font-weight: $allo-font-weight-bold;
       }
     }
   }
