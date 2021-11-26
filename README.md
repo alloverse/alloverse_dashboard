@@ -48,6 +48,45 @@ Then restart postgress like this
 `brew services restart postgres`
 
 
+## Deployment
+
+To deploy to our AWS hosted infrastructure we use Docker and Terraform.
+
+The steps are the same for both development and prodcution environment:
+
+1. Login
+2. Docker build and tag
+3. Docker push
+4. Terraform taint
+5. Terraform apply
+
+### Development
+
+1. `aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 976187562384.dkr.ecr.eu-north-1.amazonaws.com`
+
+2. `docker build -t 976187562384.dkr.ecr.eu-north-1.amazonaws.com/dev_alloverse_dashboard:latest .`
+
+3. `docker push 976187562384.dkr.ecr.eu-north-1.amazonaws.com/dev_alloverse_dashboard:latest`
+
+4. In allo-infra/environments/dev `terraform taint module.dashboard.aws_ecs_task_definition.task_definition`
+
+5. Then deploy with `terraform apply`
+
+
+### Production
+
+1. `aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 976187562384.dkr.ecr.eu-west-1.amazonaws.com`
+
+2. `docker build -t 976187562384.dkr.ecr.eu-west-1.amazonaws.com/prod_alloverse_dashboard:latest .`
+
+3. `docker push 976187562384.dkr.ecr.eu-west-1.amazonaws.com/prod_alloverse_dashboard:latest`
+
+4. In allo-infra/environments/prod `terraform taint module.dashboard.aws_ecs_task_definition.task_definition`
+
+5. Then deploy with `terraform apply`
+
+
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
