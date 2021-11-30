@@ -6,7 +6,9 @@
 
 /* Color variables  */
 $allo-color-dark: #0A223A;
+$allo-color-dark-90: rgba(10, 34, 58, 0.9);
 $allo-color-dark-60: rgba(10, 34, 58, 0.6);
+$allo-color-dark-30: rgba(10, 34, 58, 0.3);
 
 $allo-color-light: #D4F2FC;
 $allo-color-light-90: rgba(212, 242, 252, 0.9);
@@ -16,8 +18,9 @@ $allo-color-light-30: rgba(212, 242, 252, 0.3);
 $allo-color-white: #fff;
 $allo-color-white-90: rgba(255, 255, 255, 0.9);
 $allo-color-white-60: rgba(255, 255, 255, 0.6);
+$allo-color-white-30: rgba(255, 255, 255, 0.3);
 
-$allo-color-primary-alt: #B1CAE8;
+$allo-color-primary-alt: #B3BDD8;
 $allo-color-primary-alt-90: rgba(177, 202, 232, 0.9);
 
 $allo-color-gray: #85919B;
@@ -38,7 +41,7 @@ $allo-color-primary-hover: $allo-color-dark-60;
 $allo-color-primary-focus: $allo-color-dark-60;
 
 $allo-color-neutral: $allo-color-white-90;
-$allo-color-neutral-hover: $allo-color-white-60;
+$allo-color-neutral-hover: $allo-color-primary-alt-90;
 $allo-color-neutral-focus: $allo-color-white-60;
 
 $allo-color-default: $allo-color-light-90;
@@ -49,12 +52,12 @@ $allo-color-default-focus: $allo-color-light-30;
 
 /* Input Fields */
 $allo-color-input-bg: transparent;
-$allo-color-input-bg-hover: $allo-color-light-60;
-$allo-color-input-bg-focus: $allo-color-light-90;
+$allo-color-input-bg-hover: $allo-color-white-30;
+$allo-color-input-bg-focus: $allo-color-white-60;
 $allo-color-input-border: $allo-color-dark;
 $allo-color-input-border-hover: $allo-color-dark;
 $allo-color-input-border-focus: $allo-color-dark;
-$allo-color-input-placeholder: $allo-color-light;
+$allo-color-input-placeholder: $allo-color-dark-30;
 
 
 /* Text colors */
@@ -71,13 +74,13 @@ $allo-font-size-small: 0.6rem;
 
 /* Info, Error & Warning messages, etc */
 $allo-color-error: $allo-color-red;
-$allo-color-info: $allo-color-light;
+$allo-color-info: $allo-color-light-90;
 
 
 
 /* Standard border width for highlighted cards */
 /* TODO: Use this value to calculate the padding the highlight replaces. Currently, that padding is magic numbers */
-$card-highlight-border-width: 3px;
+$card-highlight-border-width: 2px;
 
 
 /* Border radii */

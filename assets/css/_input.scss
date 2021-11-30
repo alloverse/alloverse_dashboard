@@ -31,17 +31,19 @@ input[type=text],input[type=password],textarea {
   color: $allo-color-text;
   font-size: $allo-font-size-base;
 
-  border: 1px solid $allo-color-input-border;
+  //border: 1px solid $allo-color-input-border;
+  border: 0;
+  outline: $card-highlight-border-width solid $allo-color-input-border;
   background: $allo-color-input-bg;
 
   &:hover {
-    border-color: $allo-color-text;
+    outline-color: $allo-color-text;
     background: $allo-color-input-bg-hover;
   }
 
   &:focus-visible {
-    outline: 0;
-    border-color: $allo-color-text;
+    //outline: 0;
+    outline-color: $allo-color-text;
     background: $allo-color-input-bg-focus;
   }
 
@@ -50,7 +52,7 @@ input[type=text],input[type=password],textarea {
   }
 
   &.error {
-    border-color: $allo-color-error;
+    outline-color: $allo-color-error;
   }
 }
 
@@ -99,7 +101,7 @@ button, .button {
       text-decoration: none;
       background: $allo-color-light-alt;
       border-color: $allo-color-dark;
-      outline: 1px solid $allo-color-dark;
+      outline: $card-highlight-border-width solid $allo-color-dark;
     }
     &:active {
 
@@ -113,7 +115,7 @@ button, .button {
       text-decoration: none;
       background: $allo-color-light-60;
       border-color: $allo-color-dark;
-      outline: 1px solid $allo-color-dark;
+      outline: $card-highlight-border-width solid $allo-color-dark;
     }
     &:active {
       background: $allo-color-light-30;
@@ -125,7 +127,7 @@ button, .button {
     color: $allo-color-white;
     &:hover {
       background: $allo-color-dark-60;
-      outline: 1px solid $allo-color-white;
+      outline: $card-highlight-border-width solid $allo-color-white;
     }
     &:active {
       background: $allo-color-light-30;
@@ -134,12 +136,20 @@ button, .button {
 
   &.header {
     background: $allo-color-dark;
-    color: $allo-color-light;
+    color: $allo-color-white;
     &:hover {
       background: $allo-color-light-30;
       color: $allo-color-dark;
     }
     &:active {}
+
+    &.loggedin {
+      background: $allo-color-primary-alt-90;
+      color: $allo-color-dark;
+      &:hover {
+        color: $allo-color-dark;
+      }
+    }
   }
 
   &.large {

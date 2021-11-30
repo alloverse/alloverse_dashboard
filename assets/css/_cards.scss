@@ -1,6 +1,7 @@
 .card {
   display: block;
-  background: rgba(229, 203, 250, 0.6);
+  //background: rgba(229, 203, 250, 0.6);
+  background: $allo-color-light-90;
 
   box-shadow: $allo-box-shadow-base;
   margin: 0 0 18px 0;
@@ -11,7 +12,7 @@
   // border-style: solid;
   // border-color: transparent;
 
-  outline: 1px solid transparent;
+  outline: $card-highlight-border-width solid transparent;
   
   .title {
     font-size: 26px;
@@ -40,15 +41,6 @@
   &.neutral {
     background: $allo-color-neutral;
 
-    &:hover {
-      background: $allo-color-neutral-hover;
-    }
-    
-    &:focus {
-      background: $allo-color-neutral-focus;
-      border-color: $allo-color-dark;
-    }
-
     .title {
       color: $allo-color-text;
     }
@@ -56,6 +48,20 @@
     .subtitle {
       color: $allo-color-gray;
     }
+
+    &:hover {
+      background: $allo-color-neutral-hover;
+      outline: $card-highlight-border-width solid $allo-color-light;
+
+      .subtitle {
+        color: $allo-color-white;
+      }
+    }
+    
+    &:focus {
+      background: $allo-color-neutral-focus;
+    }
+    
   }
 
   &.primary {
@@ -68,7 +74,8 @@
     }
 
     &:hover {
-      background: $allo-color-dark-60;
+      background: $allo-color-dark-90;
+      outline: $card-highlight-border-width solid $allo-color-light;
       .title {
         color: $allo-color-white;
       }
@@ -79,7 +86,6 @@
 
     &:active {
       background: $allo-color-dark-60;
-      outline: 1px solid $allo-color-light;
       .title {
         color: $allo-color-white;
       }

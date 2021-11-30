@@ -7,7 +7,17 @@
     <div class="card-column-container__column-left">
 
       <div class="column-content">
+
+        <span><%= link "< Back", to: Routes.place_path(@conn, :index) %></span>
         
+        <br />
+        <br />
+
+        <h1 class="column-content__header">Settings</h1>
+        
+
+        <br />
+
         <h2>Change email</h2>
 
         <%= form_for @email_changeset, Routes.user_settings_path(@conn, :update_email), fn f -> %>
@@ -31,11 +41,10 @@
         <% end %>
 
         
-      </div>
-    </div>
+        <br />
+        <br />
+        
 
-    <div class="card-column-container__column-right">
-      <div class="column-content">
         <h2>Change password</h2>
 
         <%= form_for @password_changeset, Routes.user_settings_path(@conn, :update_password), fn f -> %>
@@ -61,7 +70,9 @@
             <%= submit "Change password", [class: "button primary"] %>
           </div>
         <% end %>
+
       </div>
     </div>
+
   </div>
 </div>
