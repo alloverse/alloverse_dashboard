@@ -79,7 +79,7 @@ textarea {
 button, .button {
   display: block;
   color: $allo-color-dark;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   font-size: $allo-font-size-base;
   font-weight: $allo-font-weight-bold;
   text-align: center;
@@ -87,7 +87,7 @@ button, .button {
   cursor: pointer;
   padding: 12px 24px;
   border: 0;
-  outline: 0;
+  outline: $card-highlight-border-width solid transparent;
 
   transition: $allo-standard-animation;
 
