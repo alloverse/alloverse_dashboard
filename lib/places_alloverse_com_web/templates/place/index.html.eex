@@ -25,7 +25,7 @@
 
           <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
 
-            <%= link to: "/place/#{recommended_place.id}", class: "card primary" do %>
+            <%= link to: "/place/#{recommended_place.id}", class: "card-button primary" do %>
               <div class="title"><%= recommended_place.name %></div>
               <div class="subtitle">Created <%= recommended_place.user.name %></div>
             <% end %>
@@ -45,7 +45,7 @@
 
           <%= Enum.map(@public_places, fn(public_place) -> %>
 
-            <%= link to: "/place/#{public_place.id}", class: "card primary" do %>
+            <%= link to: "/place/#{public_place.id}", class: "card-button primary" do %>
               <div class="title"><%= public_place.name%></div>
               <div class="subtitle">Created by <%= public_place.user.name%></div>
             <% end %>
@@ -67,13 +67,13 @@
 
       <%= Enum.map(@my_places, fn(place) -> %>
 
-        <%= link to: "/place/#{place.id}", class: "card primary" do %>
+        <%= link to: "/place/#{place.id}", class: "card-button primary" do %>
           <div class="title"><%= place.name %></div>
           <div class="subtitle"><%= place.user.name %> &middot; <%= place.inserted_at %></div>
         <% end %>
       <% end )%>
 
-        <%= link to: "/place/new", class: "card neutral" do %>
+        <%= link to: "/place/new", class: "card-button default" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Create your own place!</div>
         <% end %>
@@ -85,8 +85,7 @@
       <div class="room-list__title">
           Private
       </div>
-        <span class="card disabled">
-        <%= link to: "/", class: "card disabled" do %>
+        <%= link to: "/", class: "card-button disabled" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Coming soon!</div>
         <% end %>
@@ -97,7 +96,7 @@
           Private
       </div>
 
-        <%= link to: "/user/new", class: "card neutral" do %>
+        <%= link to: "/user/new", class: "card-button default" do %>
           <div class="title">Create an account</div>
           <div class="subtitle">Stay in the loop! We'll notify you as soon as you'll able to create your own Place.</div>
         <% end %>

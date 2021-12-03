@@ -18,7 +18,7 @@
           <%= error_tag f, :password_confirmation %>
           
           
-          <%= submit "Reset password", [class: "button neutral full-width"] %>
+          <%= submit "Reset password", [class: "button default full-width"] %>
           
         <% end %>
 

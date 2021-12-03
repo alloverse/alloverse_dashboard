@@ -24,7 +24,7 @@
           
           <%= if @current_user do %>
           <div class="dropdown-container">
-            <div class="button header loggedin">
+            <div class="button menu">
               <%# <img src="<%= Routes.static_path(@conn, "/images/user-picture.jpg") " /> %>
               <%= @current_user.name %>
             </div>

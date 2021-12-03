@@ -11,7 +11,7 @@
           <%= text_input f, :email, placeholder: "Email", required: true %>
           
           <div class="button-container-vertical">
-            <%= submit "Send instructions to reset password", [class: "button neutral full-width"] %>
+            <%= submit "Send instructions to reset password", [class: "button default full-width"] %>
           </div>
           
         <% end %>      

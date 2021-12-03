@@ -2,10 +2,13 @@
   <div class="card-column-container">
     <div class="card-column-container__column-left">
       <div class="column-content">
+        <span><%= link "< Back", to: Routes.place_path(@conn, :index) %></span>
+        
+        <br />
+        <br />
 
+        <h1 class="column-content__header">Create Account</h1>
         <%# <%= link "< Back", to: Routes.user_path(@conn, :index) %>
-
-        <h2>Create Account</h2>
 
         <%= render "create-account-form.html", Map.put(assigns, :action, Routes.user_path(@conn, :create)) %>
         

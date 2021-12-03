@@ -2,14 +2,19 @@
   <div class="card-column-container">
     <div class="card-column-container__column-left">
       <div class="column-content">
-      
-        <h2>Log in</h2>
+        
+        <span><%= link "< Back", to: Routes.place_path(@conn, :index) %></span>
+        
+        <br />
+        <br />
+
+        <h1 class="column-content__header">Log In</h1>
 
         <div class="form-container">
           <input type="text" placeholder="Email" />
           <input type="password" placeholder="Password" />
 
-          <div class="button neutral">Log In</div>
+          <div class="button default">Log In</div>
 
           <div><%= link("Forgot your password?", to: "/forgot-password") %></div>
         </div>

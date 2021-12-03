@@ -1,11 +1,6 @@
 
 
 .form-container {
-
-  // & > * {
-  //   margin-bottom: $allo-padding-base;
-  // }
-
   margin-top: 12px;
 
   &:last-child {
@@ -19,7 +14,7 @@ label {
   margin-top: 12px;
   margin-bottom: 6px;
   font-size: 0.8rem;
-  color: $allo-color-dark;
+  color: $allo-text-color;
 }
 
 input[type=text],input[type=password],textarea {
@@ -28,27 +23,24 @@ input[type=text],input[type=password],textarea {
   max-width: 100%;
   padding: $allo-padding-base;
   border-radius: $allo-border-radius-half;
-  color: $allo-color-text;
   font-size: $allo-font-size-base;
-
-  //border: 1px solid $allo-color-input-border;
   border: 0;
-  outline: $card-highlight-border-width solid $allo-color-input-border;
-  background: $allo-color-input-bg;
+  background: $allo-input-bg;
+  outline: $border-width-base solid $allo-input-border;
+  color: $allo-input-text;
 
   &:hover {
-    outline-color: $allo-color-text;
-    background: $allo-color-input-bg-hover;
+    background: $allo-input-hover-bg;
+    outline-color: $allo-input-hover-border;
   }
 
   &:focus-visible {
-    //outline: 0;
-    outline-color: $allo-color-text;
-    background: $allo-color-input-bg-focus;
+    background: $allo-input-focus-bg;
+    outline-color: $allo-input-focus-border;
   }
 
   &::placeholder {
-    color: $allo-color-input-placeholder;
+    color: $allo-input-placeholder;
   }
 
   &.error {
@@ -70,93 +62,4 @@ textarea {
 
 .forgot-password-container {
   margin-top: 12px;
-}
-
-
-
-
-
-button, .button {
-  display: block;
-  color: $allo-color-dark;
-  //text-transform: uppercase;
-  font-size: $allo-font-size-base;
-  font-weight: $allo-font-weight-bold;
-  text-align: center;
-  border-radius: $allo-border-radius-double;
-  cursor: pointer;
-  padding: 12px 24px;
-  border: 0;
-  outline: $card-highlight-border-width solid transparent;
-
-  transition: $allo-standard-animation;
-
-  position: relative;
-
-
-  &.neutral {
-    background: $allo-color-neutral;
-    color: $allo-color-dark;
-    &:hover {
-      text-decoration: none;
-      background: $allo-color-light-alt;
-      border-color: $allo-color-dark;
-      outline: $card-highlight-border-width solid $allo-color-dark;
-    }
-    &:active {
-
-    }
-  }
-  
-  &.default {
-    background: $allo-color-light-90;
-    color: $allo-color-dark;
-    &:hover {
-      text-decoration: none;
-      background: $allo-color-light-60;
-      border-color: $allo-color-dark;
-      outline: $card-highlight-border-width solid $allo-color-dark;
-    }
-    &:active {
-      background: $allo-color-light-30;
-    }
-  }
-
-  &.primary {
-    background: $allo-color-dark;
-    color: $allo-color-white;
-    &:hover {
-      background: $allo-color-dark-60;
-      outline: $card-highlight-border-width solid $allo-color-white;
-    }
-    &:active {
-      background: $allo-color-light-30;
-    }
-  }
-
-  &.header {
-    background: $allo-color-dark;
-    color: $allo-color-white;
-    &:hover {
-      background: $allo-color-light-30;
-      color: $allo-color-dark;
-    }
-    &:active {}
-
-    &.loggedin {
-      background: $allo-color-primary-alt-90;
-      color: $allo-color-dark;
-      &:hover {
-        color: $allo-color-dark;
-      }
-    }
-  }
-
-  &.large {
-    font-size: $allo-font-size-large;
-  }
-
-  &.full-width {
-    width: 100%;
-  }
 }

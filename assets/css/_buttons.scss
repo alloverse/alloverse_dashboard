@@ -1,4 +1,176 @@
 
+/* Regular buttons */
+button, .button {
+  display: block;
+  position: relative;
+  font-size: $allo-font-size-base;
+  font-weight: $allo-font-weight-bold;
+  text-align: center;
+  border-radius: $allo-border-radius-double;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: 0;
+  transition: $allo-standard-animation;
+
+  user-select: none;
+
+  background: transparent;
+  color: $allo-dark-navy;
+  outline: $border-width-base solid transparent;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+
+  &.primary {
+    background: $allo-btn-primary-bg;
+    outline-color: $allo-btn-primary-border;
+    color: $allo-btn-primary-color;
+    &:hover {
+      background: $allo-btn-primary-hover-bg;
+      outline-color: $allo-btn-primary-hover-border;
+      color: $allo-btn-primary-hover-color;
+    }
+    &:active {
+      background: $allo-btn-primary-active-bg;
+      outline-color: $allo-btn-primary-active-border;
+      color: $allo-btn-primary-active-color;
+    }
+  }
+
+  &.default {
+    background: $allo-dark-gray-60;
+    outline-color: transparent;
+    color: $allo-white;
+    &:hover {
+      background: $allo-dark-gray-60;
+      outline-color: transparent;
+      color: $allo-dark-navy;
+    }
+    &:active {
+      background: $allo-dark-gray-60;
+      outline-color: $allo-dark-navy;
+      color: $allo-dark-navy;
+    }
+  }
+
+  &.header {
+    background: $allo-dark-navy;
+    outline-color: transparent;
+    color: $allo-white;
+    
+    &:hover {
+      background: $allo-dark-gray-60;
+      outline-color: transparent;
+      color: $allo-dark-navy;
+    }
+  }
+
+  &.menu {
+    background: $allo-dark-gray-60;
+    outline-color: transparent;
+    color: $allo-white;
+    &:hover {
+      background: $allo-dark-gray-60;
+      outline-color: transparent;
+      color: $allo-dark-navy;
+    }
+  }
+
+  &.large {
+    font-size: $allo-font-size-large;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+
+/* Card buttons - larger buttons, listing places etc. */
+.card-button {
+  display: block;
+  margin: 0 0 18px 0;
+  transition: $allo-standard-animation;
+  border-radius: $allo-border-radius-base;
+  cursor: pointer;
+  padding: 29px;
+
+  background: $allo-cardbtn-default-bg;
+  box-shadow: $allo-card-box-shadow;
+
+  .title {
+    font-size: 26px;
+    font-weight: $allo-font-weight-bold;
+  }
+
+  .subtitle {
+    font-weight: $allo-font-weight-medium;
+    font-size: $allo-font-size-small;
+    line-height: 20px;
+  }
+
+  &:hover {  
+    text-decoration: none;
+  }
+
+  &.default {
+    background: $allo-cardbtn-default-bg;
+    outline-color: transparent;
+    .title { color: $allo-cardbtn-default-label }
+    .subtitle { color: $allo-cardbtn-default-subtitle }
+
+    &:hover {
+      background: $allo-cardbtn-default-hover-bg;
+      outline-color: $allo-cardbtn-default-hover-border;
+      .title { color: $allo-cardbtn-default-hover-label; }
+      .subtitle { color: $allo-cardbtn-default-hover-subtitle; }
+    }
+    
+    &:active { 
+      background: $allo-cardbtn-default-active-bg;
+      outline-color: $allo-cardbtn-default-active-border;
+      .title { color: $allo-cardbtn-default-active-label; }
+      .subtitle { color: $allo-cardbtn-default-active-subtitle; }
+    }
+    
+  }
+
+  &.primary {
+    background: $allo-cardbtn-primary-bg;
+    outline-color: transparent;
+    .title { color: $allo-cardbtn-primary-label; }
+    .subtitle { color: $allo-cardbtn-primary-subtitle; }
+
+    &:hover {
+      background: $allo-cardbtn-primary-hover-bg;
+      outline-color: $allo-cardbtn-primary-hover-border;
+      .title { color: $allo-cardbtn-primary-hover-label; }
+      .subtitle { color: $allo-cardbtn-primary-hover-subtitle }
+    }
+
+    &:active {
+      background: $allo-cardbtn-primary-active-bg;
+      outline-color: $allo-cardbtn-primary-active-border;
+      .title { color: $allo-cardbtn-primary-active-label; }
+      .subtitle { color: $allo-cardbtn-primary-active-subtitle; }
+    }
+
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    background: $allo-cardbtn-disabled-bg;
+    outline-color: $allo-cardbtn-disabled-border;
+    .title { color: $allo-cardbtn-disabled-label; }
+    .subtitle { color: $allo-cardbtn-disabled-subtitle; }
+  }
+}
+
+
+
 /* The container <div> - needed to position the dropdown content */
 .dropdown-container {
   position: relative;
@@ -18,26 +190,25 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: $allo-color-primary-alt-90;
     border-radius: $allo-border-radius-half;
     min-width: 160px;
-    box-shadow: $allo-box-shadow-base;
+    box-shadow: $allo-card-box-shadow;
     z-index: 1;
-
     padding-top: $allo-border-radius-base;
     padding-bottom: $allo-border-radius-base;
+    background-color: $allo-dark-gray-60;
     
     /* Links inside the dropdown */
     a, button {
-      color: $allo-color-text;
+      display: block;
       font-weight: normal;
       padding: 12px 24px;
       text-decoration: none;
-      display: block;
+      color: $allo-white;
 
       &:hover {
-        //background-color: $allo-color-light;
         font-weight: $allo-font-weight-bold;
+        color: $allo-dark-navy;  
       }
     }
   }

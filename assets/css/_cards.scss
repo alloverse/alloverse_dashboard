@@ -1,104 +1,22 @@
 .card {
   display: block;
-  //background: rgba(229, 203, 250, 0.6);
-  background: $allo-color-light-90;
-
-  box-shadow: $allo-box-shadow-base;
   margin: 0 0 18px 0;
   transition: $allo-standard-animation;
   border-radius: $allo-border-radius-double;
 
-  // border: 2px;
-  // border-style: solid;
-  // border-color: transparent;
+  background: $allo-card-bg;
+  box-shadow: $allo-card-box-shadow;
 
-  outline: $card-highlight-border-width solid transparent;
-  
-  .title {
-    font-size: 26px;
-    font-weight: $allo-font-weight-bold;
+  animation: fadeInUp 0.5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
   }
-
-  .subtitle {
-    font-weight: $allo-font-weight-medium;
-    font-size: $allo-font-size-small;
-    line-height: 20px;
-  }
-
-  // Makes sure .card that are also an <a> element behaves differently than non-interactive cards
-  @at-root {
-    a#{&} {
-      border-radius: $allo-border-radius-base;
-      cursor: pointer;
-      padding: 29px;
-
-      &:hover {  
-        text-decoration: none;
-      }
-    }
-  }
-
-  &.neutral {
-    background: $allo-color-neutral;
-
-    .title {
-      color: $allo-color-text;
-    }
-  
-    .subtitle {
-      color: $allo-color-gray;
-    }
-
-    &:hover {
-      background: $allo-color-neutral-hover;
-      outline: $card-highlight-border-width solid $allo-color-light;
-
-      .subtitle {
-        color: $allo-color-white;
-      }
-    }
-    
-    &:focus {
-      background: $allo-color-neutral-focus;
-    }
-    
-  }
-
-  &.primary {
-    background: $allo-color-primary;
-    .title {
-      color: $allo-color-dark;
-    }
-    .subtitle {
-      color: $allo-color-gray;
-    }
-
-    &:hover {
-      background: $allo-color-dark-90;
-      outline: $card-highlight-border-width solid $allo-color-light;
-      .title {
-        color: $allo-color-white;
-      }
-      .subtitle {
-        color: $allo-color-gray;
-      }
-    }
-
-    &:active {
-      background: $allo-color-dark-60;
-      .title {
-        color: $allo-color-white;
-      }
-      .subtitle {
-        color: $allo-color-gray;
-      }
-    }
-
-  }
-
-  &.disabled {
-    background: rgba(179, 189, 216, 0.6); //TODO: Get rid of this hardcoded color
-    color: $allo-color-white;
-    cursor: not-allowed;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,8 +1,7 @@
 
 body {
-  font-family: $allo-font-default;
+  font-family: $allo-font-family;
 }
-
 
 h1 {
   font-size: $allo-font-size-huge;
@@ -14,7 +13,7 @@ h2 {
   font-size: $allo-font-size-large;
   font-weight: $allo-font-weight-medium;
   margin: 0 0 $allo-padding-half 0;
-  color: $allo-color-dark;
+  color: $allo-dark-navy;
 }
 
 h3 {
@@ -38,7 +37,7 @@ p {
 a {
   font-weight: $allo-font-weight-bold;
   text-decoration: none;
-  color: $allo-color-link;
+  color: $allo-link-color;
 
   &:hover {
     text-decoration: underline;

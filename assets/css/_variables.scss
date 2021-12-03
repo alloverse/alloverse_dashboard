@@ -1,86 +1,168 @@
 
 
+$allo-dark-navy: #0C2B48;
+$allo-dark-navy-90: rgba(12, 43, 72, 0.9);
+$allo-dark-navy-60: rgba(12, 43, 72, 0.6);
+$allo-dark-navy-30: rgba(12, 43, 72, 0.3);
+
+$allo-dark-gray: #A9B6D1;
+$allo-dark-gray-90: rgba(169, 182, 209, 0.9);
+$allo-dark-gray-60: rgba(169, 182, 209, 0.6);
+$allo-dark-gray-30: rgba(169, 182, 209, 0.3);
+
+$allo-light-gray: #C8D0E0;
+$allo-light-gray-90: rgba(200, 208, 224, 0.9);
+$allo-light-gray-60: rgba(200, 208, 224, 0.6);
+$allo-light-gray-30: rgba(200, 208, 224, 0.3);
+
+$allo-white: #ffffff;
+$allo-white-90: rgba(255, 255, 255, 0.9);
+$allo-white-60: rgba(255, 255, 255, 0.6);
+$allo-white-30: rgba(255, 255, 255, 0.3);
+
+$allo-dark-blue: #9ACCF1;
+$allo-dark-blue-90: rgba(154, 204, 241, 0.9);
+$allo-dark-blue-60: rgba(154, 204, 241, 0.6);
+$allo-dark-blue-30: rgba(154, 204, 241, 0.3);
+
+$allo-medium-blue: #CDEBFA;
+$allo-medium-blue-90: rgba(205, 235, 250, 0.9);
+$allo-medium-blue-60: rgba(205, 235, 250, 0.6);
+$allo-medium-blue-30: rgba(205, 235, 250, 0.3);
+
+$allo-light-blue: #EAF6FF;
+$allo-light-blue-90: rgba(234, 246, 255, 0.9);
+$allo-light-blue-60: rgba(234, 246, 255, 0.6);
+$allo-light-blue-30: rgba(234, 246, 255, 0.3);
+
+$allo-dark-pink: #D488C6;
+$allo-dark-pink-90: rgba(212, 136, 198, 0.9);
+$allo-dark-pink-60: rgba(212, 136, 198, 0.6);
+$allo-dark-pink-30: rgba(212, 136, 198, 0.3);
+
+$allo-medium-pink: #E7AADA;
+$allo-medium-pink-90: rgba(231, 170, 218, 0.9);
+$allo-medium-pink-60: rgba(231, 170, 218, 0.6);
+$allo-medium-pink-30: rgba(231, 170, 218, 0.3);
 
 
-
-
-/* Color variables  */
-$allo-color-dark: #0A223A;
-$allo-color-dark-90: rgba(10, 34, 58, 0.9);
-$allo-color-dark-60: rgba(10, 34, 58, 0.6);
-$allo-color-dark-30: rgba(10, 34, 58, 0.3);
-
-$allo-color-light: #D4F2FC;
-$allo-color-light-90: rgba(212, 242, 252, 0.9);
-$allo-color-light-60: rgba(212, 242, 252, 0.6);
-$allo-color-light-30: rgba(212, 242, 252, 0.3);
-
-$allo-color-white: #fff;
-$allo-color-white-90: rgba(255, 255, 255, 0.9);
-$allo-color-white-60: rgba(255, 255, 255, 0.6);
-$allo-color-white-30: rgba(255, 255, 255, 0.3);
-
-$allo-color-primary-alt: #B3BDD8;
-$allo-color-primary-alt-90: rgba(177, 202, 232, 0.9);
-
-$allo-color-gray: #85919B;
-
-$allo-color-grayblue: #6E8FAE;
-
-$allo-color-light-alt: #E5CBFA;
-$allo-color-light-alt-60: rgba(229, 203, 250, .95);
-
-$allo-color-red: #B60000;
+$allo-red: #B60000;
 
 
 
 /* Where they're actually used */
 
-$allo-color-primary: $allo-color-light-90;
-$allo-color-primary-hover: $allo-color-dark-60;
-$allo-color-primary-focus: $allo-color-dark-60;
 
-$allo-color-neutral: $allo-color-white-90;
-$allo-color-neutral-hover: $allo-color-primary-alt-90;
-$allo-color-neutral-focus: $allo-color-white-60;
-
-$allo-color-default: $allo-color-light-90;
-$allo-color-default-hover: $allo-color-light-60;
-$allo-color-default-focus: $allo-color-light-30;
+/* Cards */
+/* Cards are the main content backgrounds */
+$allo-card-bg: $allo-medium-blue-90;
 
 
+/* Card buttons */
+/* Cards are the main content backgrounds */
 
-/* Input Fields */
-$allo-color-input-bg: transparent;
-$allo-color-input-bg-hover: $allo-color-white-30;
-$allo-color-input-bg-focus: $allo-color-white-60;
-$allo-color-input-border: $allo-color-dark;
-$allo-color-input-border-hover: $allo-color-dark;
-$allo-color-input-border-focus: $allo-color-dark;
-$allo-color-input-placeholder: $allo-color-dark-30;
+
+/* Primary */
+$allo-cardbtn-primary-bg: $allo-medium-blue;
+$allo-cardbtn-primary-border: $allo-medium-blue;
+$allo-cardbtn-primary-label: $allo-dark-navy;
+$allo-cardbtn-primary-subtitle: $allo-dark-gray;
+
+$allo-cardbtn-primary-hover-bg: $allo-dark-navy-90;
+$allo-cardbtn-primary-hover-border: $allo-medium-blue;
+$allo-cardbtn-primary-hover-label: $allo-white;
+$allo-cardbtn-primary-hover-subtitle: $allo-dark-gray;
+
+$allo-cardbtn-primary-active-bg: $allo-dark-navy-60;
+$allo-cardbtn-primary-active-border: $allo-medium-blue;
+$allo-cardbtn-primary-active-label: $allo-white;
+$allo-cardbtn-primary-active-subtitle: $allo-dark-gray;
+
+
+/* Default */
+$allo-cardbtn-default-bg: $allo-dark-navy-30;
+$allo-cardbtn-default-border: $allo-dark-navy-30;
+$allo-cardbtn-default-label: $allo-white;
+$allo-cardbtn-default-subtitle: $allo-dark-gray;
+
+$allo-cardbtn-default-hover-bg: $allo-dark-navy-30;
+$allo-cardbtn-default-hover-border: $allo-medium-blue;
+$allo-cardbtn-default-hover-label: $allo-white;
+$allo-cardbtn-default-hover-subtitle: $allo-dark-gray;
+
+$allo-cardbtn-default-active-bg: $allo-dark-navy-60;
+$allo-cardbtn-default-active-border: $allo-medium-blue;
+$allo-cardbtn-default-active-label: $allo-white;
+$allo-cardbtn-default-active-subtitle: $allo-dark-gray;
+
+
+/* Disabled */
+$allo-cardbtn-disabled-bg: $allo-dark-gray-60;
+$allo-cardbtn-disabled-border: transparent;
+$allo-cardbtn-disabled-label: $allo-white;
+$allo-cardbtn-disabled-subtitle: $allo-white;
+
+
+/* Buttons */
+/* ------- */
+
+/* Primary */
+$allo-btn-primary-bg: $allo-dark-navy;
+$allo-btn-primary-border: transparent;
+$allo-btn-primary-color: $allo-white;
+$allo-btn-primary-hover-bg: $allo-dark-gray-60;
+$allo-btn-primary-hover-border: transparent;
+$allo-btn-primary-hover-color: $allo-dark-navy;
+$allo-btn-primary-active-bg: $allo-dark-gray-60;
+$allo-btn-primary-active-border: $allo-dark-navy;
+$allo-btn-primary-active-color: $allo-white;
+
+
+/* Default */
+$allo-btn-default-bg: $allo-dark-gray-60;
+$allo-btn-default-border: transparent;
+$allo-btn-default-color: $allo-white;
+$allo-btn-default-hover-bg: $allo-dark-gray-60;
+$allo-btn-default-hover-border: transparent;
+$allo-btn-default-hover-color: $allo-dark-navy;
+$allo-btn-default-active-bg: $allo-dark-gray-60;
+$allo-btn-default-active-border: $allo-dark-navy;
+$allo-btn-default-active-color: $allo-dark-navy;
+
+
+
+/* Input fields */
+/* ------------ */
+
+$allo-input-bg: transparent;
+$allo-input-border: $allo-dark-navy;
+$allo-input-hover-bg: $allo-white-60;
+$allo-input-hover-border: $allo-dark-navy;
+$allo-input-focus-bg: $allo-white-90;
+$allo-input-focus-border: $allo-dark-navy;
+
+$allo-input-placeholder: $allo-dark-navy-30;
+$allo-input-text: $allo-dark-navy;
+
 
 
 /* Text colors */
-$allo-color-text: #0C2B48;
-$allo-color-link: #0C2B48;
+
+$allo-text-color: $allo-dark-navy;
+$allo-link-color: $allo-dark-navy;
 
 
-/* Typography */
-//@font-face { font-family: Sen; src: url('/assets/fonts/Sen/Sen-Regular.ttf'); } 
-$allo-font-default: "Sen", "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$allo-font-size-base: 0.8rem;
-$allo-font-size-large: 1rem;
-$allo-font-size-small: 0.6rem;
+
+
 
 /* Info, Error & Warning messages, etc */
-$allo-color-error: $allo-color-red;
-$allo-color-info: $allo-color-light-90;
-
+$allo-color-error: $allo-red;
+$allo-color-info: $allo-medium-blue;
 
 
 /* Standard border width for highlighted cards */
 /* TODO: Use this value to calculate the padding the highlight replaces. Currently, that padding is magic numbers */
-$card-highlight-border-width: 2px;
+$border-width-base: 2px;
 
 
 /* Border radii */
@@ -91,18 +173,18 @@ $allo-border-radius-quadruple: calc(4 * #{$allo-border-radius-base});
 $allo-border-radius-half: calc(#{$allo-border-radius-base} / 2);
 
 
-/* Font sizes */
+/* Typography */
+//@font-face { font-family: Sen; src: url('/assets/fonts/Sen/Sen-Regular.ttf'); } 
+$allo-font-family: "Sen", "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $allo-font-size-base: 1rem;
 $allo-font-size-small: 0.8rem;
 $allo-font-size-large: 1.2rem;
 $allo-font-size-huge: 1.6rem;
 
-
 /* Font weights */
 $allo-font-weight-normal: 400;
 $allo-font-weight-medium: 500;
 $allo-font-weight-bold: 600;
-
 
 /* Standard padding & margins */
 $allo-padding-base: 12px;
@@ -118,10 +200,10 @@ $allo-standard-animation: all ease-in-out 0.15s;
 
 
 /* Standard box shadow */
-$allo-color-card-shadow: rgba(0, 0, 0, 0.04);
-$allo-box-shadow-base:  0 1px 2px $allo-color-card-shadow, 
-                      0 2px 4px $allo-color-card-shadow, 
-                      0 4px 8px $allo-color-card-shadow, 
-                      0 8px 16px $allo-color-card-shadow,
-                      0 16px 32px $allo-color-card-shadow, 
-                      0 32px 64px $allo-color-card-shadow;
+$allo-card-shadow-color: rgba(0, 0, 0, 0.04);
+$allo-card-box-shadow:  0 1px 2px $allo-card-shadow-color, 
+                      0 2px 4px $allo-card-shadow-color, 
+                      0 4px 8px $allo-card-shadow-color, 
+                      0 8px 16px $allo-card-shadow-color,
+                      0 16px 32px $allo-card-shadow-color, 
+                      0 32px 64px $allo-card-shadow-color;

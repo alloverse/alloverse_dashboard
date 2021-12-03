@@ -1,3 +1,88 @@
+body {
+  margin: 0;
+  height: 100vh;
+  
+  background: #8BA0D2 url("/images/bg_purple.png") no-repeat top;
+
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: $allo-text-color; 
+  font-family: $allo-font-family;
+  font-size: $allo-font-size-base;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .main-container {
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 48px;
+
+  margin-bottom: 48px;
+
+  &__title {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &__logo {
+      height: 48px;
+      width: 48px;
+      margin-right: $allo-padding-base;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    & > * {
+      margin-left: $allo-padding-base;
+    }
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  .column {
+    width: 100%;
+    .room-list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      &__title {
+        margin: 24px 0 12px 0;
+        font-size: $allo-font-size-small;
+        font-weight: $allo-font-weight-bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /* Basic 2-column grid (within cards), one being an image. */
@@ -24,14 +109,6 @@
 
     .column-content {
       padding: $allo-padding-quadruple;
-
-      // .column-content__header {
-      //   margin: 0 0 $allo-padding-half 0 ;
-      // }
-
-      // .column-content__subheader {
-      //   margin: 0 0 $allo-padding-half 0 ;
-      // }
 
       .column-content__paragraph {
         margin: $allo-padding-double 0;
@@ -72,15 +149,8 @@
 /* -------------------------------------------------------------------------- */
 
 .message-card {
-  // Alternate styling:
-  // position: absolute;
-  // top:0;
-  // left:0;
-  // width: 100vw;
-  // margin:0;
-
   background: $allo-color-info;
-  color: $allo-color-text;
+  color: $allo-text-color;
   
   margin-bottom: 12px;
   font-size: $allo-font-size-base;
@@ -94,11 +164,11 @@
 
   &.info {
     background: $allo-color-info;
-    color: $allo-color-text;
+    color: $allo-text-color;
   }
 
   &.error {
     background: $allo-color-error;
-    color: $allo-color-light;
+    color: $allo-white;
   }
 }
