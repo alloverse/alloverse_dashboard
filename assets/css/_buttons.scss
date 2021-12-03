@@ -99,6 +99,8 @@ button, .button {
 
   background: $allo-cardbtn-default-bg;
   box-shadow: $allo-card-box-shadow;
+  outline-width: $border-width-base;
+  outline-style: solid;
 
   .title {
     font-size: 26px;
