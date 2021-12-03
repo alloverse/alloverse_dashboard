@@ -3,7 +3,12 @@
     <div class="card-column-container__column-left">
       <div class="column-content">
 
-        <h2>Password Recovery</h2>
+        <span><%= link "< Back", to: Routes.place_path(@conn, :index) %></span>
+        
+        <br />
+        <br />
+
+        <h1 class="column-content__header">Password Recovery</h1>
         
         <%= form_for :user, Routes.user_reset_password_path(@conn, :create), [method: :post, as: :user, class: "form-container"], fn f -> %>
           
@@ -11,7 +16,7 @@
           <%= text_input f, :email, placeholder: "Email", required: true %>
           
           <div class="button-container-vertical">
-            <%= submit "Send instructions to reset password", [class: "button default full-width"] %>
+            <%= submit "Send instructions to reset password", [class: "button primary full-width"] %>
           </div>
           
         <% end %>      

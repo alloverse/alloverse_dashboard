@@ -115,7 +115,7 @@ $allo-btn-primary-hover-border: transparent;
 $allo-btn-primary-hover-color: $allo-dark-navy;
 $allo-btn-primary-active-bg: $allo-dark-gray-60;
 $allo-btn-primary-active-border: $allo-dark-navy;
-$allo-btn-primary-active-color: $allo-white;
+$allo-btn-primary-active-color: $allo-dark-navy;
 
 
 /* Default */
@@ -195,8 +195,9 @@ $allo-padding-half: calc(#{$allo-padding-base}/2);
 
 
 /* Standard animation specification */
-/* TODO: Improve performance by only animating things that matter, i.e. not "all" */
-$allo-standard-animation: all ease-in-out 0.15s;
+$allo-transition-property: outline-color, color, background-color;
+$allo-transition-timing-function: "ease-in-out";
+$allo-transition-duration: 0.15s;
 
 
 /* Standard box shadow */

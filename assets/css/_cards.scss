@@ -1,7 +1,10 @@
 .card {
   display: block;
   margin: 0 0 18px 0;
-  transition: $allo-standard-animation;
+  transition-property: $allo-transition-property;
+  transition-timing-function: $allo-transition-timing-function;
+  transition-duration: $allo-transition-duration;
+  
   border-radius: $allo-border-radius-double;
 
   background: $allo-card-bg;

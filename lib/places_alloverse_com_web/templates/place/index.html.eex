@@ -20,7 +20,9 @@
       <%= if not Enum.empty?(@recommended_places) do %>
         <div class="room-list recommended">
           <div class="room-list__title">
-            Recommended
+            <div>
+              Recommended
+            </div>
           </div>
 
           <%= Enum.map(@recommended_places, fn(recommended_place) -> %>
@@ -40,7 +42,9 @@
       <%= if not Enum.empty?(@public_places) do %>
         <div class="room-list public">
           <div class="room-list__title">
-            Public
+            <div>
+              Public
+            </div>
           </div>
 
           <%= Enum.map(@public_places, fn(public_place) -> %>
@@ -62,7 +66,9 @@
 
      <%= if @current_user && @admin_user do %>
       <div class="room-list__title">
-        My Places
+        <div>
+          My Places
+        </div>
       </div>
 
       <%= Enum.map(@my_places, fn(place) -> %>
@@ -79,27 +85,32 @@
         <% end %>
       <% end %>
 
-    </div>
+      
 
-    <%= if @current_user && !@admin_user do %>
-      <div class="room-list__title">
-          Private
-      </div>
+      <%= if @current_user && !@admin_user do %>
+        <div class="room-list__title">
+          <div>
+            Private
+          </div>
+        </div>
         <%= link to: "/", class: "card-button disabled" do %>
           <div class="title">Create new Place</div>
           <div class="subtitle">Coming soon!</div>
         <% end %>
-    <% end %>
+      <% end %>
 
-    <%= if !@current_user do %>
-      <div class="room-list__title">
-          Private
-      </div>
+      <%= if !@current_user do %>
+        <div class="room-list__title">
+          <div>
+            Private
+          </div>
+        </div>
 
         <%= link to: "/user/new", class: "card-button default" do %>
           <div class="title">Create an account</div>
           <div class="subtitle">Stay in the loop! We'll notify you as soon as you'll able to create your own Place.</div>
         <% end %>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -10,7 +10,10 @@ button, .button {
   cursor: pointer;
   padding: 12px 24px;
   border: 0;
-  transition: $allo-standard-animation;
+  
+  transition-property: $allo-transition-property;
+  transition-timing-function: $allo-transition-timing-function;
+  transition-duration: $allo-transition-duration;
 
   user-select: none;
 
@@ -92,7 +95,9 @@ button, .button {
 .card-button {
   display: block;
   margin: 0 0 18px 0;
-  transition: $allo-standard-animation;
+  transition-property: $allo-transition-property;
+  transition-timing-function: $allo-transition-timing-function;
+  transition-duration: $allo-transition-duration;
   border-radius: $allo-border-radius-base;
   cursor: pointer;
   padding: 29px;
@@ -178,7 +183,10 @@ button, .button {
   position: relative;
   display: inline-block;
 
-  transition: $allo-standard-animation;
+  transition-property: $allo-transition-property;
+  transition-timing-function: $allo-transition-timing-function;
+  transition-duration: $allo-transition-duration;
+
 
   &:hover {
     /* Show the dropdown menu on hover */
