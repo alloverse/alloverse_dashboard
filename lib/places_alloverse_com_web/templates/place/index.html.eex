@@ -2,7 +2,7 @@
   <div class="message-card info">
     <h1>Welcome to Alloverse Places!</h1>
     <p>
-      These are public Places, hosted on Alloverse’s own servers. <a href="https://alloverse.com/download/">Download the desktop client</a> to join one!<br />
+      These are public Places, hosted on Alloverse’s own servers. <a href="https://alloverse.com/download/" target="_blank">Download the desktop client</a> to join one!<br />
       Soon, you can come here to create Places for others to join, too.
     </p>
   </div>
@@ -29,7 +29,7 @@
 
             <%= link to: "/place/#{recommended_place.id}", class: "card-button primary" do %>
               <div class="title"><%= recommended_place.name %></div>
-              <div class="subtitle">Created <%= recommended_place.user.name %></div>
+              <div class="subtitle">Created by <%= recommended_place.user.name %></div>
             <% end %>
 
           <% end )%>
@@ -75,7 +75,7 @@
 
         <%= link to: "/place/#{place.id}", class: "card-button primary" do %>
           <div class="title"><%= place.name %></div>
-          <div class="subtitle"><%= place.user.name %> &middot; <%= place.inserted_at %></div>
+          <div class="subtitle"><%= place.user.name %></div>  <%#&middot; <%= place.inserted_at %>
         <% end %>
       <% end )%>
 
