@@ -39,6 +39,7 @@
 
 
       <%# Only draw public places cards (and their header) if such a list exists %>
+      <!--
       <%= if not Enum.empty?(@public_places) do %>
         <div class="room-list public">
           <div class="room-list__title">
@@ -58,6 +59,7 @@
 
         </div>
       <% end %>
+      -->
     </div>
   <% end %>
 

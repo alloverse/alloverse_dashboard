@@ -11,11 +11,11 @@
         <h1 class="column-content__header">Log In</h1>
         
         <%= form_for @conn, Routes.session_path(@conn, :create), [method: :post, as: :user, class: "form-container"], fn f -> %>
-          
+
           <%= label f, :email, "What's your email?" %>
           <%= text_input f, :email, placeholder: "email@example.com" %>
-          
-          <%= label f, :password, "Pick a password" %>
+
+          <%= label f, :password, "What's your password" %>
           <%= password_input f, :password, placeholder: "" %>
           
           <div class="button-container-vertical">
